@@ -7,4 +7,12 @@
 <struts>
     <constant name="struts.enable.DynamicMethodInvocation"  value="false" />
     <constant name="struts.devMode" value="true" />
+    <!--前台配置开始-->
+
+    <!--前台配置结束-->
+
+
+    <!--后台配置开始-->
+
+    <!--后台配置结束-->
 </struts>
