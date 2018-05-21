@@ -1,0 +1,8 @@
+# Build project
+
+# Idea config
+/.idea/
+
+# Vim
+tags
+*.swp
