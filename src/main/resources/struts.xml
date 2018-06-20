@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+    <!-- 默认访问页面 -->
+    <package name="default" extends="struts-default" namespace="/">
+        <default-action-ref name="default"/>
+        <action name="default">
+            <result>/index.jsp</result>
+        </action>
+    </package>
+
+    <!-- 商品相关请求转发 -->
+    <!-- Struts2在2.5版本后添加strict-method-invocation(严格方法访问)，默认为true，不能使用动态方法调用功能，故需设为false -->
+    <package name="product" extends="struts-default" namespace="/"  strict-method-invocation="false">
+        <!-- 保存商品 -->
+        <action name="product_*" class="com.mall.product.action.ProductAction" method="{1}Product">
+            <result>/index.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+    </package>
+
+    <!-- 引入资源文件 -->
+    <constant name="struts.custom.i18n.resources" value="messageResource"></constant>
+
+</struts>

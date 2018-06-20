@@ -6,3 +6,6 @@
 # Vim
 tags
 *.swp
+
+# Build file
+/target/
