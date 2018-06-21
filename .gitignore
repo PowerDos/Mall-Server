@@ -10,4 +10,7 @@ tags
 # Build file
 /target/
 
-jdbc.properties
+jdbc.propert*
+/.settings/
+.classpath
+.project
