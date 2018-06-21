@@ -3,6 +3,7 @@
 # Idea config
 /.idea/
 
+
 # Vim
 tags
 *.swp
@@ -12,5 +13,7 @@ tags
 
 jdbc.propert*
 /.settings/
+/bin
 .classpath
 .project
+*.iml
