@@ -9,3 +9,5 @@ tags
 
 # Build file
 /target/
+
+jdbc.properties
