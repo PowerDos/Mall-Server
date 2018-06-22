@@ -14,7 +14,16 @@
 
     <!-- 商品相关请求转发 -->
     <!-- Struts2在2.5版本后添加strict-method-invocation(严格方法访问)，默认为true，不能使用动态方法调用功能，故需设为false -->
-    <package name="product" extends="struts-default" namespace="/"  strict-method-invocation="false">
+    <package name="product" extends="struts-default" namespace="/api/v1"  strict-method-invocation="false">
+        <!-- 保存商品 -->
+        <action name="product_*" class="com.mall.product.action.ProductAction" method="{1}Product">
+            <result>/index.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+    </package>
+
+    <!-- 后台 API 接口 -->
+    <package name="apiV2-v2" extends="struts-default" namespace="/api/v2"  strict-method-invocation="false">
         <!-- 保存商品 -->
         <action name="product_*" class="com.mall.product.action.ProductAction" method="{1}Product">
             <result>/index.jsp</result>

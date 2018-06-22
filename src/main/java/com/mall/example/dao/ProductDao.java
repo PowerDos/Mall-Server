@@ -1,7 +1,7 @@
-package com.mall.product.dao;
+package com.mall.example.dao;
 
 
-import com.mall.product.model.Product;
+import com.mall.example.model.Product;
 
 /**
  * 商品操作-持久层接口

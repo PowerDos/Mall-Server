@@ -1,7 +1,7 @@
-package com.mall.product.dao.impl;
+package com.mall.example.dao.impl;
 
-import com.mall.product.dao.ProductDao;
-import com.mall.product.model.Product;
+import com.mall.example.dao.ProductDao;
+import com.mall.example.model.Product;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;

@@ -1,7 +1,7 @@
-package com.mall.product.action;
+package com.mall.example.action;
 
-import com.mall.product.model.Product;
-import com.mall.product.service.ProductService;
+import com.mall.example.model.Product;
+import com.mall.example.service.ProductService;
 import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

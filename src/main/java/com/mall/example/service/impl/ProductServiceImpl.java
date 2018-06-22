@@ -1,8 +1,8 @@
-package com.mall.product.service.impl;
+package com.mall.example.service.impl;
 
-import com.mall.product.dao.ProductDao;
-import com.mall.product.model.Product;
-import com.mall.product.service.ProductService;
+import com.mall.example.dao.ProductDao;
+import com.mall.example.model.Product;
+import com.mall.example.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

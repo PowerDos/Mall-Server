@@ -1,4 +1,4 @@
-package com.mall.product.model;
+package com.mall.example.model;
 
 
 import org.hibernate.annotations.GenericGenerator;
