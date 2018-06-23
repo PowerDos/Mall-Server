@@ -3,41 +3,8 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
-
-    <!--rest config-->
-    <!--<constant name="struts.mapper.class" value="rest" />-->
-
-    <!--convention config-->
-    <constant name="struts.convention.action.suffix" value="Controller"/>
-    <constant name="struts.convention.action.mapAllMatches" value="true"/>
-    <constant name="struts.convention.default.parent.package" value="rest-default"/>
-    <!--<constant name="struts.convention.action.packages" value="com.mall.*.action"></constant>-->
-    <constant name="struts.convention.package.locators" value="action"/>
-
-    <!--custom handle-->
-    <bean name="jsonHandler" type="org.apache.struts2.rest.handler.ContentTypeHandler"
-          class="com.mall.handler.JsonHandler" />
-
-
-    <!--action config-->
-    <package name="default" namespace="/api/v1" extends="rest-default">
-    </package>
-
-
-    <!-- 默认访问页面 -->
-    <!--<package name="default" extends="struts-default" namespace="/">-->
-    <!--<default-action-ref name="default"/>-->
-    <!--<action name="default">-->
-    <!--<result>/index.jsp</result>-->
-    <!--</action>-->
-    <!--</package>-->
-
-    <!-- 后台 struts 配置 -->
-    <!--<package name="api-admin" extends="rest-default">-->
-    <!--<global-allowed-methods>index,show,create,update,destroy</global-allowed-methods>-->
-    <!--</package>-->
-
-    <!-- 引入资源文件 -->
-    <!--<constant name="struts.custom.i18n.resources" value="messageResource"></constant>-->
-
+    <!--前台Struts文件-->
+    <include file="frontend.struts.xml"></include>
+    <!--后台Struts文件-->
+    <include file="admin.struts.xml"></include>
 </struts>

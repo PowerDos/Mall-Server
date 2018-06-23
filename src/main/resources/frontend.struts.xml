@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="frontend" namespace="/api/v8/u" extends="struts-default,json-default">
+        <!-- 声明拦截器 -->
+        <interceptors>
+            <!--只允许post的拦截器-->
+            <interceptor name="postPass"
+                         class="com.mall.Interceptor.postInterceptor" />
+
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="postPass" />
+            </interceptor-stack>
+        </interceptors>
+
+        <action name="user_*" class="userAction" method="{1}">
+            <result name="success" type="json" >
+                <param name="root">jsonResult</param>
+            </result>
+            <interceptor-ref name="json"/>
+            <interceptor-ref name="myStack" />
+        </action>
+    </package>
+</struts>

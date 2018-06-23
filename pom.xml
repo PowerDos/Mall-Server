@@ -62,15 +62,10 @@
             <artifactId>struts2-core</artifactId>
             <version>${struts.version}</version>
         </dependency>
-        <!--struts2 rest 插件-->
+        <!--struts-json 插件-->
         <dependency>
             <groupId>org.apache.struts</groupId>
-            <artifactId>struts2-rest-plugin</artifactId>
-            <version>${struts.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.struts</groupId>
-            <artifactId>struts2-convention-plugin</artifactId>
+            <artifactId>struts2-json-plugin</artifactId>
             <version>${struts.version}</version>
         </dependency>
         <!-- Struts2和Spring整合依赖 -->
