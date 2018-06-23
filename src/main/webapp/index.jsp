@@ -10,7 +10,7 @@
 <body>
 <h1>新增商品</h1>
 <s:actionmessage/>
-<s:form action="product_save" method="post" namespace="/" theme="simple">
+<s:form action="product_save" method="post" namespace="/api/v1" theme="simple">
     <table width="600px">
         <tr>
             <th>商品名称</th>

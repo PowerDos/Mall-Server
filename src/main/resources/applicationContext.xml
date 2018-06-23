@@ -35,7 +35,7 @@
             </props>
         </property>
         <!-- 扫描并加载注解过的实体类 -->
-        <property name="packagesToScan" value="com.mall.*.model"/>
+        <property name="packagesToScan" value="com.mall.model"/>
     </bean>
 
     <!-- 配置事务管理器 -->

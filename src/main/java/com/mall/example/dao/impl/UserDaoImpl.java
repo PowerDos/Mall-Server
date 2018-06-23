@@ -1,7 +1,7 @@
 package com.mall.example.dao.impl;
 
-import com.mall.example.dao.ProductDao;
-import com.mall.example.model.Product;
+import com.mall.example.dao.UserDao;
+import com.mall.example.model.User;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -12,18 +12,18 @@ import org.springframework.stereotype.Repository;
  *
  */
 @Repository
-public class ProductDaoImpl implements ProductDao {
+public class UserDaoImpl implements UserDao {
 
     public HibernateTemplate template;
 
     @Autowired
-    public ProductDaoImpl(SessionFactory sessionFactory) {
+    public UserDaoImpl(SessionFactory sessionFactory) {
         template = new HibernateTemplate(sessionFactory);
     }
 
     @Override
-    public void saveProduct(Product product) {
-        template.save(product);
+    public void saveUser(User user) {
+        template.save(user);
     }
 
 }
