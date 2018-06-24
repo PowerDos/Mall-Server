@@ -54,18 +54,7 @@
         </tx:attributes>
     </tx:advice>
 
-    <!-- 配置切面 -->
-    <aop:config>
-        <!-- 配置切入点
-            * com.mall.service.*+.*(..)
-                *：表示方法的作用域，*表示所有
-                com.mall.service.*：表示com.mall.service下的任何包
-                com.mall.service.*+：表示com.mall.service下的任何包及其子包
-                *(..)：*表示任何方法，(..)表示方法的任何参数
-         -->
-        <aop:pointcut expression="execution(* com.mall.*.service.*+.*(..))" id="pointcut"/>
-        <!-- 适配切入点和事务增强 -->
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
-    </aop:config>
+    <!-- 开启aop操作 -->
+    <aop:aspectj-autoproxy proxy-target-class="true" expose-proxy="true" />
 
 </beans>

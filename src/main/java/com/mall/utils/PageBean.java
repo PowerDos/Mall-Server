@@ -1,4 +1,4 @@
-package com.mall.util;
+package com.mall.utils;
 
 import java.util.List;
 

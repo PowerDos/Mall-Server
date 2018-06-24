@@ -1,22 +1,52 @@
 package com.mall.model;
 
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.util.List;
+
 /**
- * 商品
+ * 商品分组
+ *
+ * 商品分组提供给商家自己归类商品
+ *
  */
+@Entity
+@Table(name = "goods_group")
 public class GoodsGroup {
 
+    @Id
+    @GeneratedValue(generator = "id")
+    @GenericGenerator(name = "id", strategy = "native")
     private int id;
 
-    // 多张照片使用 `,` 分割
-    private String goodsImgs;
+    private String goodsName;
 
-    private String goodsCode;
+    @ManyToMany(mappedBy = "goodsGroups", fetch = FetchType.EAGER)
+    private List<Goods> goodses;
 
-    private String goodsPrice;
+    public int getId() {
+        return id;
+    }
 
-    private String goodsDesc;
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    private Boolean onSale;
+    public String getGoodsName() {
+        return goodsName;
+    }
 
+    public void setGoodsName(String goodsName) {
+        this.goodsName = goodsName;
+    }
+
+    public List<Goods> getGoodses() {
+        return goodses;
+    }
+
+    public void setGoodses(List<Goods> goodses) {
+        this.goodses = goodses;
+    }
 }

@@ -2,6 +2,7 @@ package com.mall.admin.action;
 
 import com.mall.admin.service.AdminUserService;
 import com.mall.model.AdminUser;
+import com.mall.utils.ResponseTemplate;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -22,85 +23,74 @@ public class AdminUserAction extends AdminBaseAction {
 
     // 列出所有
     public String list() {
-        System.out.println("List admin user");
-        adminUsers = adminUserService.findAll();
+        // 分页设置
+        if (hasPageSetting()) {
+            int page = getPageSetting();
+            int pageSize = getPageSizeSetting();
 
-        Map<String, Object> payload = new HashMap<>();
-        payload.put("result", adminUsers);
-        payload.put("rcode", 0);
-        payload.put("message", "success");
-        jsonResult = payload;
+            adminUsers = adminUserService.findByPage(page, pageSize);
+        } else {
+            adminUsers = adminUserService.findAll();
+        }
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("data", adminUsers);
+        jsonResult = ResponseTemplate.success(map);
         return SUCCESS;
     }
 
     // 列出一个
     public String get() {
-        System.out.println("Get admin user");
-        adminUser = adminUserService.findById(2);
+        if (this.adminUser == null) {
+            jsonResult = ResponseTemplate.error(-1, "Param adminUser is required!");
+            return SUCCESS;
+        }
 
-        Map<String, Object> payload = new HashMap<>();
-        payload.put("result", adminUser);
-        payload.put("rcode", 0);
-        payload.put("message", "success");
-        jsonResult = payload;
+        Map<String, Object> map = new HashMap<>();
+        adminUser = adminUserService.findById(this.adminUser.getId());
+        map.put("data", adminUser);
+        jsonResult = ResponseTemplate.success(map);
         return SUCCESS;
     }
 
     // 添加
     public String add() {
-        System.out.println("Add admin user");
-
-        this.adminUser = new AdminUser();
-        this.adminUser.setUsername("wjh");
-        this.adminUser.setAdmin(false);
-        this.adminUser.setEmail("876531738@qq.com");
+        if (this.adminUser == null) {
+            jsonResult = ResponseTemplate.error(-1, "Param adminUser is required!");
+            return SUCCESS;
+        }
 
         int status = adminUserService.save(this.adminUser);
-
         System.out.println(status);
-        if (status == 0) {
-            Map<String, Object> payload = new HashMap<>();
-            payload.put("result", adminUser);
-            payload.put("rcode", 0);
-            payload.put("message", "success");
-            jsonResult = payload;
-        } else {
-            Map<String, Object> payload = new HashMap<>();
-            payload.put("result", adminUser);
-            payload.put("rcode", -1);
-            payload.put("message", "Bad request");
-            jsonResult = payload;
-        }
+
+        // TODO: 18-6-25 Check the status
+        Map<String, Object> map = new HashMap<>();
+        map.put("data", adminUser);
+        jsonResult = ResponseTemplate.success(map);
         return SUCCESS;
     }
 
     // 更新
     public String update() {
-        System.out.println("Update admin user");
-        this.adminUser = new AdminUser();
-        this.adminUser.setId(1);
-        this.adminUser.setUsername("test update");
-        this.adminUser.setAdmin(false);
-        this.adminUser.setEmail("876531738@qq.com");
+        if (this.adminUser == null) {
+            jsonResult = ResponseTemplate.error(-1, "Param adminUser is required!");
+            return SUCCESS;
+        }
 
         adminUserService.update(adminUser);
 
-        Map<String, Object> payload = new HashMap<>();
-        payload.put("result", adminUser);
-        payload.put("rcode", 0);
-        payload.put("message", "success");
-        jsonResult = payload;
+        Map<String, Object> map = new HashMap<>();
+        map.put("data", adminUser);
+        jsonResult = ResponseTemplate.success(map);
         return SUCCESS;
     }
 
     // 删除
     public String delete() {
-        System.out.println("Delete admin user");
-        this.adminUser = new AdminUser();
-        this.adminUser.setId(1);
-        this.adminUser.setUsername("test update");
-        this.adminUser.setAdmin(false);
-        this.adminUser.setEmail("876531738@qq.com");
+        if (this.adminUser == null) {
+            jsonResult = ResponseTemplate.error(-1, "Param adminUser is required!");
+            return SUCCESS;
+        }
 
         adminUserService.delete(this.adminUser);
 
@@ -108,11 +98,12 @@ public class AdminUserAction extends AdminBaseAction {
         HttpServletResponse res = ServletActionContext.getResponse();
         res.setStatus(400);
 
-        Map<String, Object> payload = new HashMap<>();
-        payload.put("rcode", 0);
-        payload.put("message", "success");
-        jsonResult = payload;
+        Map<String, Object> map = new HashMap<>();
+        jsonResult = ResponseTemplate.success(map);
         return SUCCESS;
     }
 
+    public void setAdminUser(AdminUser adminUser) {
+        this.adminUser = adminUser;
+    }
 }

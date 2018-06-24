@@ -1,5 +1,3 @@
-# Build project
-
 # Idea config
 /.idea/
 
@@ -10,6 +8,7 @@ tags
 
 # Build file
 /target/
+/out/
 
 jdbc.propert*
 /.settings/
