@@ -6,4 +6,28 @@
 
 <struts>
     <!--package name 用admin开通 例如: name="admin_goods"-->
+    <package name="admin" namespace="/api/v1" extends="struts-default,json-default">
+        <!-- 声明拦截器 -->
+        <interceptors>
+            <!--只允许post的拦截器-->
+            <interceptor name="postPass"
+                         class="com.mall.Interceptor.postInterceptor" />
+
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="json"/>
+                <interceptor-ref name="postPass" />
+            </interceptor-stack>
+        </interceptors>
+
+        <!--开启全部方法可访问-->
+        <global-allowed-methods>regex:.*</global-allowed-methods>
+        <!--例如： /api/v8/user_add  会访问 userAction 下的 add目录-->
+        <action name="*_*" class="com.mall.admin.action.{1}Action" method="{2}">
+            <result name="success" type="json" >
+                <param name="root">jsonResult</param>
+            </result>
+            <interceptor-ref name="myStack" />
+        </action>
+    </package>
 </struts>

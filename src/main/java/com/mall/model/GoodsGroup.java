@@ -4,7 +4,7 @@ package com.mall.model;
 /**
  * 商品
  */
-public class Goods {
+public class GoodsGroup {
 
     private int id;
 
