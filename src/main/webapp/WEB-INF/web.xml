@@ -30,7 +30,7 @@
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
-    配置 log4j
+    <!--配置 log4j-->
     <listener>
         <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
     </listener>
