@@ -19,7 +19,6 @@ public class postInterceptor extends AbstractInterceptor {
     @Override
     public String intercept(ActionInvocation actionInvocation) throws Exception {
         String method = ServletActionContext.getRequest().getMethod();
-        System.out.println(method);
         if (method.equals("POST")) {
             actionInvocation.invoke();
             return null;
