@@ -74,15 +74,14 @@ public class UserAction extends ActionSupport {
      * 用户注册
      * @return
      */
-//    public void add() {
-//        Map<String, Object> map = new HashMap<String, Object>();
-//        int result = userService.saveUser(user);
-//        System.out.println(result);
-//        System.out.println("..............");
-//        map.put("rcode", 0);
-//        jsonResult = map;
-//        return;
-//    }
+    public String add() {
+        Map<String, Object> map = new HashMap<String, Object>();
+        int result = userService.saveUser(user);
+        System.out.println(result);
+        map.put("rcode", 0);
+        jsonResult = map;
+        return SUCCESS;
+    }
 
     public String save() {
         try {

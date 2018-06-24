@@ -15,15 +15,17 @@
 
             <interceptor-stack name="myStack">
                 <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="json"/>
                 <interceptor-ref name="postPass" />
             </interceptor-stack>
         </interceptors>
-
-        <action name="user_*" class="userAction" method="{1}">
+        <!--开启全部方法可访问-->
+        <global-allowed-methods>regex:.*</global-allowed-methods>
+        <!--例如： /api/v8/user_add  会访问 userAction 下的 add目录-->
+        <action name="*_*" class="{1}Action" method="{2}">
             <result name="success" type="json" >
                 <param name="root">jsonResult</param>
             </result>
-            <interceptor-ref name="json"/>
             <interceptor-ref name="myStack" />
         </action>
     </package>
