@@ -101,10 +101,11 @@ public class UserAction extends ActionSupport {
     public String login() {
         User user =  userService.isAllowLogin(this.phone, this.password);
         if (user != null) {
-            String str = Token.createToken(user, 3600 * 6);
+            String str = Token.createToken(user, 3600 * 60);
             Map<String, Object> data = new LinkedHashMap<>();
             data.put("username", user.getUsername());
             data.put("phone", user.getPhone());
+            data.put("mail", user.getMail());
             data.put("token", str);
             jsonResult = ResponseTemplate.success(data);
         } else {

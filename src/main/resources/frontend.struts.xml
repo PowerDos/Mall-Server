@@ -13,8 +13,6 @@
             <interceptor name="postPass"
                          class="com.mall.Interceptor.postInterceptor" />
 
-            <interceptor name="auth"
-                         class="com.mall.Interceptor.authInterceptor" />
             <interceptor-stack name="myStack">
                 <interceptor-ref name="json"/>
                 <interceptor-ref name="defaultStack" />
@@ -25,6 +23,31 @@
         <global-allowed-methods>regex:.*</global-allowed-methods>
         <!--例如： /api/v8/user_add  会访问 userAction 下的 add目录-->
         <action name="*_*" class="{1}Action" method="{2}">
+            <interceptor-ref name="myStack" />
+            <result name="success" type="json" >
+                <param name="root">jsonResult</param>
+            </result>
+        </action>
+    </package>
+    <package name="frontend_auth" namespace="/api/v8/u" extends="struts-default,json-default">
+        <!-- 声明拦截器 -->
+        <interceptors>
+            <!--只允许post的拦截器-->
+            <interceptor name="postPass"
+                         class="com.mall.Interceptor.postInterceptor" />
+            <!--token 验证-->
+            <interceptor name="auth"
+                         class="com.mall.Interceptor.authInterceptor" />
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="json"/>
+                <interceptor-ref name="auth"/>
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="postPass" />
+            </interceptor-stack>
+        </interceptors>
+        <!--开启全部方法可访问-->
+        <global-allowed-methods>regex:.*</global-allowed-methods>
+        <action name="address_*" class="addressAction" method="{1}">
             <interceptor-ref name="myStack" />
             <result name="success" type="json" >
                 <param name="root">jsonResult</param>

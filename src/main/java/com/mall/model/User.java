@@ -6,6 +6,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -14,27 +15,27 @@ public class User {
     @Id
     @GeneratedValue(generator="id")
     @GenericGenerator(name="id", strategy="native")
-    private int userid;
+    private int userid; // 用户id
 
-    private String username;
+    private String username; // 用户名
 
-    private String password;
+    private String password; // 密码
 
-    private String mail;
+    private String mail; // 邮箱
 
-    private String phone;
+    private String phone; // 手机
 
-    private int status;
+    private int status; // 状态
 
     @Column(updatable=false, name="create_at")
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
-    private Date createAt;
+    private Date createAt; // 创建时间
 
     @Column(name="update_at")
     @Temporal(TemporalType.TIMESTAMP)
     @UpdateTimestamp
-    private Date updateAt;
+    private Date updateAt; // 修改时间
 
     public int getUserid() {
         return userid;

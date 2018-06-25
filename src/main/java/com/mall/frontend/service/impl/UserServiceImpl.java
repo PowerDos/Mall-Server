@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
 
     public User isAllowLogin(String phone, String password) {
         List<User> users = userDao.getUserByPhone(phone);
-        String pwd = users.get(0).getPassword();
+        String pwd = users.size() > 0 ? users.get(0).getPassword() : "xasda";
         System.out.println(pwd);
         if (pwd.equals(password)) {
             return users.get(0);
