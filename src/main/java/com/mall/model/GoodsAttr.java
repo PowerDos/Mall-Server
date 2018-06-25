@@ -22,6 +22,9 @@ public class GoodsAttr {
     // 该配置信息
     private String attrTitle;
 
+    // 该配置商品小图
+    private String attrImgUrl;
+
     // 该配置商品编号（每一个属性都有一个独特的商品编号）
     private String goodsCode;
 
@@ -31,8 +34,8 @@ public class GoodsAttr {
     // 该配置商品是否已上架
     private Boolean onSale;
 
-    @ManyToOne
-    private Goods goods;
+//    @ManyToOne
+//    private Goods goods;
 
     public int getId() {
         return id;
@@ -74,11 +77,11 @@ public class GoodsAttr {
         this.onSale = onSale;
     }
 
-    public Goods getGoods() {
-        return goods;
-    }
-
-    public void setGoods(Goods goods) {
-        this.goods = goods;
-    }
+//    public Goods getGoods() {
+//        return goods;
+//    }
+//
+//    public void setGoods(Goods goods) {
+//        this.goods = goods;
+//    }
 }

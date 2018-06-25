@@ -24,8 +24,8 @@ public class GoodsComment {
     // 评价等级：星星数量
     private int commentLevel;
 
-    @ManyToOne
-    private Goods goods;
+//    @ManyToOne
+//    private Goods goods;
 
     public int getId() {
         return id;
@@ -51,11 +51,11 @@ public class GoodsComment {
         this.commentLevel = commentLevel;
     }
 
-    public Goods getGoods() {
-        return goods;
-    }
-
-    public void setGoods(Goods goods) {
-        this.goods = goods;
-    }
+//    public Goods getGoods() {
+//        return goods;
+//    }
+//
+//    public void setGoods(Goods goods) {
+//        this.goods = goods;
+//    }
 }

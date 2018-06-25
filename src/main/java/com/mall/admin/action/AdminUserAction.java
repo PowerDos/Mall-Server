@@ -63,10 +63,13 @@ public class AdminUserAction extends AdminBaseAction {
         int status = adminUserService.save(this.adminUser);
         System.out.println(status);
 
-        // TODO: 18-6-25 Check the status
-        Map<String, Object> map = new HashMap<>();
-        map.put("data", adminUser);
-        jsonResult = ResponseTemplate.success(map);
+        if (status > 0) {
+            Map<String, Object> map = new HashMap<>();
+            map.put("data", adminUser);
+            jsonResult = ResponseTemplate.success(map);
+        } else {
+            jsonResult = ResponseTemplate.error(-1, "添加失败");
+        }
         return SUCCESS;
     }
 

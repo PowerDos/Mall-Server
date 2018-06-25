@@ -8,6 +8,9 @@ import javax.persistence.*;
 import java.util.Date;
 
 
+/**
+ * 用户
+ */
 @Entity
 @Table(name="user")
 public class User {
