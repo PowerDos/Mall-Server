@@ -16,7 +16,6 @@
             <interceptor name="auth"
                          class="com.mall.Interceptor.authInterceptor" />
             <interceptor-stack name="myStack">
-                <interceptor-ref name="auth"/>
                 <interceptor-ref name="json"/>
                 <interceptor-ref name="defaultStack" />
                 <interceptor-ref name="postPass" />

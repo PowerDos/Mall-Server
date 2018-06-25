@@ -45,14 +45,7 @@
     </bean>
 
     <!-- 配置事务增强 -->
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <tx:attributes>
-            <!-- 配置需要进行事务管理的方法，和事务传播行为 -->
-            <tx:method name="save*" propagation="REQUIRED"/>
-            <tx:method name="update*" propagation="REQUIRED"/>
-            <tx:method name="delete*" propagation="REQUIRED"/>
-        </tx:attributes>
-    </tx:advice>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <!-- 开启aop操作 -->
     <aop:aspectj-autoproxy proxy-target-class="true" expose-proxy="true" />

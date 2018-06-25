@@ -20,6 +20,8 @@ public class User {
 
     private String password;
 
+    private String mail;
+
     private String phone;
 
     private int status;
@@ -88,5 +90,13 @@ public class User {
 
     public void setUpdateAt(Date updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 }
