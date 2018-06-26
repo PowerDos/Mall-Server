@@ -34,6 +34,7 @@ public class MerchantAction extends AdminBaseAction {
         }
 
         Map<String, Object> map = new HashMap<>();
+
         map.put("data", merchants);
         jsonResult = ResponseTemplate.success(map);
         return SUCCESS;

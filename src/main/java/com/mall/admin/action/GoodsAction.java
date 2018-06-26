@@ -104,8 +104,6 @@ public class GoodsAction extends AdminBaseAction {
         }
 
         int status = goodsService.save(this.goods);
-        System.out.println(status);
-
         if (status > 0) {
             Map<String, Object> map = new HashMap<>();
             map.put("data", goods);

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Scope;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
+
 @Scope("prototype")
 public class BaseAction extends ActionSupport {
     public Map<String, Object> jsonResult;

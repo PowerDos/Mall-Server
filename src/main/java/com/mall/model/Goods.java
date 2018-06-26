@@ -31,6 +31,9 @@ public class Goods {
     // 商品描述（只能使用图片，规则和商品图片相同）
     private String goodsDesc;
 
+    // 基础价格，套餐价格在此基础上变化
+    private double basicPrice;
+
     // 商品销售总数
     private int salesNum;
 
@@ -155,5 +158,13 @@ public class Goods {
 
     public void setGoodsComments(Set<GoodsComment> goodsComments) {
         this.goodsComments = goodsComments;
+    }
+
+    public double getBasicPrice() {
+        return basicPrice;
+    }
+
+    public void setBasicPrice(double basicPrice) {
+        this.basicPrice = basicPrice;
     }
 }

@@ -32,10 +32,10 @@ public interface GoodsService {
 
     Goods findById(int id);
 
-    int save(Goods adminUser);
+    int save(Goods goods);
 
-    void update(Goods adminUser);
+    void update(Goods goods);
 
-    void delete(Goods adminUser);
+    void delete(Goods goods);
 
 }
