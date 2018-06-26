@@ -18,6 +18,11 @@ public class UploadAction extends ActionSupport {
     public Map<String, Object> jsonResult;
 
     public String upload() {
+        if (uploadFile == null) {
+            jsonResult = ResponseTemplate.error(-1, "No file!");
+            return SUCCESS;
+        }
+
         System.out.println(this.uploadFileContentType);
         System.out.println(this.uploadFileFileName);
 

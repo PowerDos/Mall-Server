@@ -5,9 +5,7 @@ import com.mall.model.Goods;
 import com.mall.model.GoodsCat;
 import com.mall.model.Merchant;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
+import org.hibernate.criterion.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -112,6 +110,59 @@ public class GoodsDaoImpl implements GoodsDao {
         int offset = (page - 1) * pageSize;
         List<Goods> resultList = (List<Goods>) this.template.findByCriteria(criteria, offset, pageSize);
         return resultList;
+    }
+
+    @Override
+    public int getCount() {
+        DetachedCriteria criteria = DetachedCriteria.forClass(Goods.class);
+        criteria.setProjection(Projections.rowCount());
+        Object obj  = template.findByCriteria(criteria).get(0);
+        Long longObj = (Long) obj;
+        int count = longObj.intValue();
+        return count;
+    }
+
+    @Override
+    public int getCountByGoodsName(String goodsName) {
+        DetachedCriteria criteria = DetachedCriteria.forClass(Goods.class);
+
+        criteria.add(Restrictions.like("goodsName", "%"+goodsName+"%"));
+        criteria.setProjection(Projections.rowCount());
+
+        Object obj  = template.findByCriteria(criteria).get(0);
+        Long longObj = (Long) obj;
+        int count = longObj.intValue();
+        return count;
+    }
+
+    @Override
+    public int getCountByMerchantId(int merchantId) {
+        DetachedCriteria criteria = DetachedCriteria.forClass(Goods.class);
+
+        Merchant merchant = new Merchant();
+        merchant.setId(merchantId);
+        criteria.add(Restrictions.eq("merchant", merchant));
+        criteria.setProjection(Projections.rowCount());
+
+        Object obj  = template.findByCriteria(criteria).get(0);
+        Long longObj = (Long) obj;
+        int count = longObj.intValue();
+        return count;
+    }
+
+    @Override
+    public int getCountByCatId(int catId) {
+        DetachedCriteria criteria = DetachedCriteria.forClass(Goods.class);
+
+        GoodsCat goodsCat = new GoodsCat();
+        goodsCat.setId(catId);
+        criteria.add(Restrictions.eq("goodsCat", goodsCat));
+        criteria.setProjection(Projections.rowCount());
+
+        Object obj  = template.findByCriteria(criteria).get(0);
+        Long longObj = (Long) obj;
+        int count = longObj.intValue();
+        return count;
     }
 
     @Override
