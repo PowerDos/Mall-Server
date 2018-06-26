@@ -31,6 +31,14 @@ public class AdminBaseAction extends ActionSupport {
         return hasParam("page") || hasParam("pageSize");
     }
 
+    // 获取排序设置，默认为 ID
+    protected String getOrderSetting() {
+        if (!hasParam("order")) {
+            return "id";
+        }
+        return getParam("order");
+    }
+
     // 获取参数
     protected String getParam(String paramName) {
         HttpServletRequest req = ServletActionContext.getRequest();

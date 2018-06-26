@@ -15,38 +15,50 @@ public class GoodsServiceImpl implements GoodsService {
     private GoodsDao goodsDao;
 
     @Override
-    public List<Goods> findAll() {
-        List<Goods> goodses = goodsDao.findAll();
+    public List<Goods> findAll(String orderKeys) {
+        List<Goods> goodses = goodsDao.findAll(orderKeys);
         return goodses;
     }
 
     @Override
-    public List<Goods> findByGoodsName(String goodsName) {
-        List<Goods> goodses = goodsDao.findByGoodsName(goodsName);
+    public List<Goods> findByGoodsName(String goodsName, String orderKeys) {
+        List<Goods> goodses = goodsDao.findByGoodsName(goodsName, orderKeys);
         return goodses;
     }
 
     @Override
-    public List<Goods> findByGoodsNameAndPage(String goodsName, int page, int pageSize) {
-        List<Goods> goodses = goodsDao.findByGoodsNameAndPage(goodsName, page, pageSize);
+    public List<Goods> findByGoodsNameAndPage(String goodsName, int page, int pageSize, String orderKeys) {
+        List<Goods> goodses = goodsDao.findByGoodsNameAndPage(goodsName, page, pageSize, orderKeys);
         return goodses;
     }
 
     @Override
-    public List<Goods> findByCatId(int catId) {
-        List<Goods> goodses = goodsDao.findByCatId(catId);
+    public List<Goods> findByMerchantId(int merchantId, String orderKeys) {
+        List<Goods> goodses = goodsDao.findByMerchantId(merchantId, orderKeys);
         return goodses;
     }
 
     @Override
-    public List<Goods> findByCatIdAndPage(int catId, int page, int pageSize) {
-        List<Goods> goodses = goodsDao.findByCatIdAndPage(catId, page, pageSize);
+    public List<Goods> findByMerchantIdAndPage(int merchantId, int page, int pageSize, String orderKeys) {
+        List<Goods> goodses = goodsDao.findByMerchantIdAndPage(merchantId, page, pageSize, orderKeys);
         return goodses;
     }
 
     @Override
-    public List<Goods> findByPage(int offset, int pageSize) {
-        List<Goods> goodss = goodsDao.findByPage(offset, pageSize);
+    public List<Goods> findByCatId(int catId, String orderKeys) {
+        List<Goods> goodses = goodsDao.findByCatId(catId, orderKeys);
+        return goodses;
+    }
+
+    @Override
+    public List<Goods> findByCatIdAndPage(int catId, int page, int pageSize, String orderKeys) {
+        List<Goods> goodses = goodsDao.findByCatIdAndPage(catId, page, pageSize, orderKeys);
+        return goodses;
+    }
+
+    @Override
+    public List<Goods> findByPage(int offset, int pageSize, String orderKeys) {
+        List<Goods> goodss = goodsDao.findByPage(offset, pageSize, orderKeys);
         return goodss;
     }
 
