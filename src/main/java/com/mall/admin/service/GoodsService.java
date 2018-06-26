@@ -6,17 +6,21 @@ import java.util.List;
 
 public interface GoodsService {
 
-    List<Goods> findAll();
+    List<Goods> findAll(String orderKeys);
 
-    List<Goods> findByGoodsName(String goodsName);
+    List<Goods> findByGoodsName(String goodsName, String orderKeys);
 
-    List<Goods> findByGoodsNameAndPage(String goodsName, int page, int pageSize);
+    List<Goods> findByGoodsNameAndPage(String goodsName, int page, int pageSize, String orderKeys);
 
-    List<Goods> findByCatId(int catId);
+    List<Goods> findByMerchantId(int merchantId, String orderKeys);
 
-    List<Goods> findByCatIdAndPage(int catId, int page, int pageSize);
+    List<Goods> findByMerchantIdAndPage(int merchantId, int page, int pageSize, String orderKeys);
 
-    List<Goods> findByPage(int offset, int pageSize);
+    List<Goods> findByCatId(int catId, String orderKeys);
+
+    List<Goods> findByCatIdAndPage(int catId, int page, int pageSize, String orderKeys);
+
+    List<Goods> findByPage(int offset, int pageSize, String orderKeys);
 
     Goods findById(int id);
 
