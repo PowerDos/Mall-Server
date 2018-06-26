@@ -19,40 +19,49 @@ public class GoodsAction extends BaseAction {
     private List<Goods> goodses;
 
     public String list() {
+        String orderKeys;
+
+        // 默认按照销售总数排序
+        if (hasParam("order")) {
+            orderKeys = getParam("order");
+        } else {
+            orderKeys = "salesNum";
+        }
+
         if (hasPageSetting()) {
             int page = getPageSetting();
             int pageSize = getPageSizeSetting();
 
-            System.out.println(getParam("goodsName"));
-            System.out.println(getParam("page"));
-            System.out.println();
-            System.out.println(getParam("pageSize"));
             // 根据参数判断用户是否要根据指定值查找
             if (hasParam("goodsName")) {
-                System.out.println("Has page and goodsName！");
-                goodses = goodsService.findByGoodsNameAndPage(getParam("goodsName"), page, pageSize);
+                goodses = goodsService.findByGoodsNameAndPage(getParam("goodsName"), page, pageSize, orderKeys);
+                System.out.println("goodsName!");
             } else if (hasParam("catId")) {
-                System.out.println("Has page and catId！");
-                goodses = goodsService.findByCatIdAndPage(Integer.parseInt(getParam("catId")), page, pageSize);
+                goodses = goodsService.findByCatIdAndPage(Integer.parseInt(getParam("catId")), page, pageSize, orderKeys);
+            } else if (hasParam("merchantId")) {
+                goodses = goodsService.findByMerchantIdAndPage(Integer.parseInt(getParam("merchantId")), page, pageSize, orderKeys);
+                System.out.println("merchantId");
             } else {
-                System.out.println("Has page and catId!");
-                goodses = goodsService.findByPage(page, pageSize);
+                goodses = goodsService.findByPage(page, pageSize, orderKeys);
             }
         } else {
             if (hasParam("goodsName")) {
-                System.out.println("Has goodsName！");
-                goodses = goodsService.findByGoodsName(getParam("goodsName"));
+                goodses = goodsService.findByGoodsName(getParam("goodsName"), orderKeys);
             } else if (hasParam("catId")) {
-                System.out.println("Has catId！");
-                goodses = goodsService.findByCatId(Integer.parseInt(getParam("catId")));
+                goodses = goodsService.findByCatId(Integer.parseInt(getParam("catId")), orderKeys);
+                System.out.println("catId!");
+            } else if (hasParam("merchantId")) {
+                goodses = goodsService.findByMerchantId(Integer.parseInt(getParam("merchantId")), orderKeys);
             } else {
-                System.out.println("find all");
-                goodses = goodsService.findAll();
+                goodses = goodsService.findAll(orderKeys);
             }
         }
 
         Map<String, Object> map = new HashMap<>();
         map.put("data", goodses);
+
+        // 加上商品总数
+        map.put("goodsSum", goodses.size());
         jsonResult = ResponseTemplate.success(map);
         return SUCCESS;
     }
