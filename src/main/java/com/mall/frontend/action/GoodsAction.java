@@ -18,6 +18,10 @@ public class GoodsAction extends BaseAction {
     private Goods goods;
     private List<Goods> goodses;
 
+    private int goodsId;
+    public void setGoodsId(int goodsId) {
+        this.goodsId = goodsId;
+    }
     public String list() {
         String orderKeys;
 
@@ -62,6 +66,14 @@ public class GoodsAction extends BaseAction {
 
         // 加上商品总数
         map.put("goodsSum", goodses.size());
+        jsonResult = ResponseTemplate.success(map);
+        return SUCCESS;
+    }
+
+    public String one () {
+        Map<String, Object> map = new HashMap<>();
+        goods = goodsService.findById(goodsId);
+        map.put("data", goods);
         jsonResult = ResponseTemplate.success(map);
         return SUCCESS;
     }
