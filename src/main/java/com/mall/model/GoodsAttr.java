@@ -79,11 +79,15 @@ public class GoodsAttr {
         this.onSale = onSale;
     }
 
-//    public Goods getGoods() {
-//        return goods;
-//    }
-//
-//    public void setGoods(Goods goods) {
-//        this.goods = goods;
-//    }
+    public String getAttrImgUrl() {
+        return attrImgUrl;
+    }
+
+    public void setAttrImgUrl(String attrImgUrl) {
+        this.attrImgUrl = attrImgUrl;
+    }
+
+    public void setAttrPrice(double attrPrice) {
+        this.attrPrice = attrPrice;
+    }
 }
