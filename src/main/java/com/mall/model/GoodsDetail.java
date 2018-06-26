@@ -28,10 +28,6 @@ public class GoodsDetail {
     // 商品详细信息的 Value
     private String detailValue;
 
-    // 商品
-    @ManyToOne
-    private Goods goods;
-
     public int getId() {
         return id;
     }
@@ -54,13 +50,5 @@ public class GoodsDetail {
 
     public void setDetailValue(String detailValue) {
         this.detailValue = detailValue;
-    }
-
-    public Goods getGoods() {
-        return goods;
-    }
-
-    public void setGoods(Goods goods) {
-        this.goods = goods;
     }
 }

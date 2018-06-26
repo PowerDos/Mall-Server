@@ -33,6 +33,8 @@
     <filter-mapping>
         <filter-name>struts2</filter-name>
         <url-pattern>/*</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.png</url-pattern>
     </filter-mapping>
 
     <!-- 配置Spring的监听器 -->

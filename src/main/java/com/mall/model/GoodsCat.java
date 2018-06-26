@@ -27,8 +27,38 @@ public class GoodsCat {
     // 分类名称
     private String catName;
 
-    // 分类下的所有商品
-    @OneToMany(mappedBy = "goodsCat", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Goods> goodses;
+    @Transient
+    private List<GoodsCat> childrenCats;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(int parentId) {
+        this.parentId = parentId;
+    }
+
+    public String getCatName() {
+        return catName;
+    }
+
+    public void setCatName(String catName) {
+        this.catName = catName;
+    }
+
+    public List<GoodsCat> getChildrenCats() {
+        return childrenCats;
+    }
+
+    public void setChildrenCats(List<GoodsCat> childrenCats) {
+        this.childrenCats = childrenCats;
+    }
 }

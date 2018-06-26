@@ -1,6 +1,7 @@
 package com.mall.model;
 
 
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -22,17 +23,21 @@ public class GoodsAttr {
     // 该配置信息
     private String attrTitle;
 
+    // 该配置商品小图
+    private String attrImgUrl;
+
     // 该配置商品编号（每一个属性都有一个独特的商品编号）
     private String goodsCode;
 
     // 该配置商品价格
-    private int attrPrice;
+    private double attrPrice;
 
     // 该配置商品是否已上架
+    @ColumnDefault(value = "false")
     private Boolean onSale;
 
-    @ManyToOne
-    private Goods goods;
+//    @ManyToOne
+//    private Goods goods;
 
     public int getId() {
         return id;
@@ -58,7 +63,7 @@ public class GoodsAttr {
         this.goodsCode = goodsCode;
     }
 
-    public int getAttrPrice() {
+    public double getAttrPrice() {
         return attrPrice;
     }
 
@@ -74,11 +79,11 @@ public class GoodsAttr {
         this.onSale = onSale;
     }
 
-    public Goods getGoods() {
-        return goods;
-    }
-
-    public void setGoods(Goods goods) {
-        this.goods = goods;
-    }
+//    public Goods getGoods() {
+//        return goods;
+//    }
+//
+//    public void setGoods(Goods goods) {
+//        this.goods = goods;
+//    }
 }

@@ -8,6 +8,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.util.List;
@@ -25,40 +26,43 @@ public class AdminUserDaoImpl implements AdminUserDao {
     @Override
     public List<AdminUser> findAll() {
         DetachedCriteria criteria = DetachedCriteria.forClass(AdminUser.class);
-        List<AdminUser> adminUsers = (List<AdminUser>) template.findByCriteria(criteria);
-
-        return adminUsers;
+        return (List<AdminUser>) template.findByCriteria(criteria);
     }
 
     @Override
     public AdminUser findById(int id) {
         DetachedCriteria criteria = DetachedCriteria.forClass(AdminUser.class);
         criteria.add(Restrictions.eq("id", id));
-        List<AdminUser> adminUsers = (List<AdminUser>) template.findByCriteria(criteria);
-        if (adminUsers.size() == 0) {
+        List<AdminUser> resultList = (List<AdminUser>) template.findByCriteria(criteria);
+
+        if (resultList.size() == 0) {
             return null;
         }
-        return adminUsers.get(0);
+        return resultList.get(0);
     }
 
-    public List<AdminUser> findByPage(int offset, int pageSize) {
+    public List<AdminUser> findByPage(int page, int pageSize) {
         DetachedCriteria criteria = DetachedCriteria.forClass(AdminUser.class);
-        List<AdminUser> list = (List<AdminUser>) this.template.findByCriteria(criteria, offset, pageSize);
-        return list;
+        int offset = (page - 1) * pageSize;
+        List<AdminUser> resultList = (List<AdminUser>) template.findByCriteria(criteria, offset, pageSize);
+        return resultList;
     }
 
     @Override
+    @Transactional()
     public int save(AdminUser adminUser) {
         Serializable result = template.save(adminUser);
         return (Integer)result;
     }
 
     @Override
+    @Transactional()
     public void update(AdminUser adminUser) {
         template.update(adminUser);
     }
 
     @Override
+    @Transactional()
     public void delete(AdminUser adminUser) {
         template.delete(adminUser);
     }

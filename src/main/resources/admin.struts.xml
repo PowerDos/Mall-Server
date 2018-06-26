@@ -22,7 +22,7 @@
 
         <!--开启全部方法可访问-->
         <global-allowed-methods>regex:.*</global-allowed-methods>
-        <!--例如： /api/v8/user_add  会访问 userAction 下的 add目录-->
+        <!--例如 /api/v8/user_add  会访问 userAction 下的 add目录-->
         <action name="*_*" class="com.mall.admin.action.{1}Action" method="{2}">
             <result name="success" type="json" >
                 <param name="root">jsonResult</param>

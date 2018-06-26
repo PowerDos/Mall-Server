@@ -1,15 +1,19 @@
 package com.mall.model;
 
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.*;
 
+import javax.persistence.CascadeType;
 import javax.persistence.*;
-import java.util.ArrayList;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
+/**
+ * 后台管理员分组
+ */
 @Entity
 @Table(name = "admin_group")
 public class AdminGroup {
@@ -31,8 +35,9 @@ public class AdminGroup {
     @UpdateTimestamp
     private Date updatedAt;
 
-    @ManyToMany(mappedBy = "adminGroups", fetch = FetchType.EAGER)
-    private List<AdminUser> adminUsers = new ArrayList<>();
+    @ManyToMany(mappedBy = "adminGroups", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @Fetch(value = FetchMode.SUBSELECT)
+    private Set<AdminUser> adminUsers = new HashSet<>();
 
     public int getId() {
         return id;
@@ -66,11 +71,11 @@ public class AdminGroup {
         this.updatedAt = updatedAt;
     }
 
-    public List<AdminUser> getAdminUsers() {
+    public Set<AdminUser> getAdminUsers() {
         return adminUsers;
     }
 
-    public void setAdminUsers(List<AdminUser> adminUsers) {
+    public void setAdminUsers(Set<AdminUser> adminUsers) {
         this.adminUsers = adminUsers;
     }
 }

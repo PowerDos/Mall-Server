@@ -1,10 +1,13 @@
 package com.mall.model;
 
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 商品分组
@@ -23,8 +26,9 @@ public class GoodsGroup {
 
     private String goodsName;
 
-    @ManyToMany(mappedBy = "goodsGroups", fetch = FetchType.EAGER)
-    private List<Goods> goodses;
+    @ManyToMany(mappedBy = "goodsGroups", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @Fetch(value = FetchMode.SUBSELECT)
+    private Set<Goods> goodses = new HashSet<>();
 
     public int getId() {
         return id;
@@ -42,11 +46,11 @@ public class GoodsGroup {
         this.goodsName = goodsName;
     }
 
-    public List<Goods> getGoodses() {
+    public Set<Goods> getGoodses() {
         return goodses;
     }
 
-    public void setGoodses(List<Goods> goodses) {
+    public void setGoodses(Set<Goods> goodses) {
         this.goodses = goodses;
     }
 }

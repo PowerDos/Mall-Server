@@ -25,10 +25,10 @@ public class Merchant {
     private String merchantName;
 
     // 店铺地址
-    private String mechantPlace;
+    private String merchantPlace;
 
     // 店铺描述
-    private String mechantDesc;
+    private String merchantDesc;
 
     // 后台登陆密码
     private String adminPass;
@@ -58,20 +58,20 @@ public class Merchant {
         this.merchantName = merchantName;
     }
 
-    public String getMechantPlace() {
-        return mechantPlace;
+    public String getMerchantPlace() {
+        return merchantPlace;
     }
 
-    public void setMechantPlace(String mechantPlace) {
-        this.mechantPlace = mechantPlace;
+    public void setMerchantPlace(String merchantPlace) {
+        this.merchantPlace = merchantPlace;
     }
 
-    public String getMechantDesc() {
-        return mechantDesc;
+    public String getMerchantDesc() {
+        return merchantDesc;
     }
 
-    public void setMechantDesc(String mechantDesc) {
-        this.mechantDesc = mechantDesc;
+    public void setMerchantDesc(String merchantDesc) {
+        this.merchantDesc = merchantDesc;
     }
 
     public String getAdminPass() {

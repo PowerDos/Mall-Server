@@ -7,4 +7,29 @@
     <include file="frontend.struts.xml"></include>
     <!--后台Struts文件-->
     <include file="admin.struts.xml"></include>
+
+    <!--上传文件-->
+    <package name="uploader" namespace="/" extends="struts-default,json-default">
+        <interceptors>
+            <!--只允许post的拦截器-->
+            <interceptor name="postPass"
+                         class="com.mall.Interceptor.postInterceptor" />
+
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="json"/>
+                <interceptor-ref name="postPass" />
+            </interceptor-stack>
+        </interceptors>
+
+        <action name="upload" class="com.mall.common.UploadAction" method="upload">
+            <result name="success" type="json">
+                <param name="root">jsonResult</param>
+            </result>
+            <interceptor-ref name="myStack" />
+        </action>
+    </package>
+
+    <!--过滤静态文件-->
+    <constant name="struts.action.excludePattern" value="/static/.*?"></constant>
 </struts>
