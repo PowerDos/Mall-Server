@@ -23,15 +23,20 @@ public class UploadAction extends ActionSupport {
             return SUCCESS;
         }
 
-        System.out.println(this.uploadFileContentType);
-        System.out.println(this.uploadFileFileName);
-
         // 1.获取文件的保存路径
         String basePath = ServletActionContext.getServletContext().getRealPath("/uploads");
         File basePathFile = new File(basePath);
+        if (!basePathFile.exists()) {
+            basePathFile.mkdirs();
+        }
 
         // 2.把文件名UUID
-        String GUIDFileName = TokenHelper.generateGUID() + "_" + uploadFileFileName;
+        String GUIDFileName = TokenHelper.generateGUID();
+        if ("image/png".equals(uploadFileContentType)) {
+             GUIDFileName = GUIDFileName + ".png";
+        } else {
+            GUIDFileName = GUIDFileName + ".jpg";
+        }
 
         // 3.保存文件
         // 复制：临时文件还在，浪费服务器磁盘空间
@@ -41,7 +46,7 @@ public class UploadAction extends ActionSupport {
 
         // 4. 返回结果，将文件的保存路径返回
         Map<String, Object> map = new HashMap<>();
-        map.put("filePath", basePath + "/" + GUIDFileName);
+        map.put("filePath", "uploads/" + GUIDFileName);
         jsonResult = ResponseTemplate.success(map);
         return SUCCESS;
     }

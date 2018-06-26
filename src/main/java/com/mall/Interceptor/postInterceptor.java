@@ -19,8 +19,13 @@ public class postInterceptor extends AbstractInterceptor {
      */
     @Override
     public String intercept(ActionInvocation actionInvocation) throws Exception {
+        // 解决跨域
         HttpServletResponse res = ServletActionContext.getResponse();
         res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader("Access-Control-Allow-Credentials", "true");
+        res.setHeader("Access-Control-Allow-Methods", "*");
+        res.setHeader("Access-Control-Allow-Headers", "Content-Type,Access-Token");
+        res.setHeader("Access-Control-Expose-Headers", "*");
 
         String method = ServletActionContext.getRequest().getMethod();
         if (method.equals("POST")) {

@@ -34,6 +34,6 @@
     
     3. 修改秒杀接口返回的数据，封装好 Goods 返回，包含秒杀价格的 GoodsAttr （添加 Goods 接口：根据 GoodsAttrId 来查找商品）
     
-    4. 部分商品没有套餐，在外层添加价格
+    4. 部分商品没有套餐，在外层添加价格，Detail 的 Key, Value 数据不正确
     
 
