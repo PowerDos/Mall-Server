@@ -23,6 +23,14 @@ public interface GoodsDao {
 
     List<Goods> findByPage(int page, int pageSize, String orderKeys);
 
+    int getCount();
+
+    int getCountByGoodsName(String goodsName);
+
+    int getCountByMerchantId(int merchantId);
+
+    int getCountByCatId(int catId);
+
     Goods findById(int id);
 
     int save(Goods goods);

@@ -31,29 +31,45 @@ public class GoodsAction extends AdminBaseAction {
             orderKeys = "salesNum";
         }
 
+        int count;
+
         if (hasPageSetting()) {
             int page = getPageSetting();
             int pageSize = getPageSizeSetting();
 
             // 根据参数判断用户是否要根据指定值查找
             if (hasParam("goodsName")) {
-                goodses = goodsService.findByGoodsNameAndPage(getParam("goodsName"), page, pageSize, orderKeys);
+                String goodsName = getParam("goodsName");
+                goodses = goodsService.findByGoodsNameAndPage(goodsName, page, pageSize, orderKeys);
+                count = goodsService.getCountByGoodsName(goodsName);
             } else if (hasParam("catId")) {
-                goodses = goodsService.findByCatIdAndPage(Integer.parseInt(getParam("catId")), page, pageSize, orderKeys);
+                int catId = Integer.parseInt(getParam("catId"));
+                goodses = goodsService.findByCatIdAndPage(catId, page, pageSize, orderKeys);
+                count = goodsService.getCountByCatId(catId);
             } else if (hasParam("merchantId")) {
-                goodses = goodsService.findByMerchantIdAndPage(Integer.parseInt(getParam("merchantId")), page, pageSize, orderKeys);
+                int merchantId = Integer.parseInt(getParam("merchantId"));
+                goodses = goodsService.findByMerchantIdAndPage(merchantId, page, pageSize, orderKeys);
+                count = goodsService.getCountByMerchantId(merchantId);
             } else {
                 goodses = goodsService.findByPage(page, pageSize, orderKeys);
+                count = goodsService.getCount();
             }
         } else {
             if (hasParam("goodsName")) {
+                String goodsName = getParam("goodsName");
                 goodses = goodsService.findByGoodsName(getParam("goodsName"), orderKeys);
+                count = goodsService.getCountByGoodsName(goodsName);
             } else if (hasParam("catId")) {
+                int catId = Integer.parseInt(getParam("catId"));
                 goodses = goodsService.findByCatId(Integer.parseInt(getParam("catId")), orderKeys);
+                count = goodsService.getCountByCatId(catId);
             } else if (hasParam("merchantId")) {
+                int merchantId = Integer.parseInt("merchantId");
                 goodses = goodsService.findByMerchantId(Integer.parseInt(getParam("merchantId")), orderKeys);
+                count = goodsService.getCountByMerchantId(merchantId);
             } else {
                 goodses = goodsService.findAll(orderKeys);
+                count = goodsService.getCount();
             }
         }
 
@@ -61,7 +77,7 @@ public class GoodsAction extends AdminBaseAction {
         map.put("data", goodses);
 
         // 加上商品总数
-        map.put("goodsSum", goodses.size());
+        map.put("goodsSum", count);
         jsonResult = ResponseTemplate.success(map);
         return SUCCESS;
     }

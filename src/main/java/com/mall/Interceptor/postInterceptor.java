@@ -6,6 +6,7 @@ import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 import com.opensymphony.xwork2.util.ValueStack;
 import org.apache.struts2.ServletActionContext;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,6 +19,9 @@ public class postInterceptor extends AbstractInterceptor {
      */
     @Override
     public String intercept(ActionInvocation actionInvocation) throws Exception {
+        HttpServletResponse res = ServletActionContext.getResponse();
+        res.setHeader("Access-Control-Allow-Origin", "*");
+
         String method = ServletActionContext.getRequest().getMethod();
         if (method.equals("POST")) {
             actionInvocation.invoke();
