@@ -1,6 +1,7 @@
 package com.mall.model;
 
 
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -29,9 +30,10 @@ public class GoodsAttr {
     private String goodsCode;
 
     // 该配置商品价格
-    private int attrPrice;
+    private double attrPrice;
 
     // 该配置商品是否已上架
+    @ColumnDefault(value = "false")
     private Boolean onSale;
 
 //    @ManyToOne
@@ -61,7 +63,7 @@ public class GoodsAttr {
         this.goodsCode = goodsCode;
     }
 
-    public int getAttrPrice() {
+    public double getAttrPrice() {
         return attrPrice;
     }
 

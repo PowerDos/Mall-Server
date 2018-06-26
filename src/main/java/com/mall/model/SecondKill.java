@@ -23,7 +23,7 @@ public class SecondKill {
     private String skImg;
 
     // 秒杀价格
-    private int skPrice;
+    private double skPrice;
 
     // 秒杀结束时间
     @Temporal(TemporalType.TIMESTAMP)
@@ -50,7 +50,7 @@ public class SecondKill {
         this.skImg = skImg;
     }
 
-    public int getSkPrice() {
+    public double getSkPrice() {
         return skPrice;
     }
 

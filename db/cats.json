@@ -3,1415 +3,340 @@
     {
       "catName": "食品",
       "childrenCats": [
-        {
-          "catName": "进口食品",
-          "childrenCats": null,
-          "id": 28,
-          "parentId": 1
-        },
-        {
-          "catName": "休闲零食",
-          "childrenCats": null,
-          "id": 29,
-          "parentId": 1
-        },
-        {
-          "catName": "营养保健",
-          "childrenCats": null,
-          "id": 30,
-          "parentId": 1
-        },
-        {
-          "catName": "粮油干货",
-          "childrenCats": null,
-          "id": 31,
-          "parentId": 1
-        },
-        {
-          "catName": "冲饮乳品",
-          "childrenCats": null,
-          "id": 32,
-          "parentId": 1
-        },
-        {
-          "catName": "酒类",
-          "childrenCats": null,
-          "id": 33,
-          "parentId": 1
-        },
-        {
-          "catName": "茶叶",
-          "childrenCats": null,
-          "id": 34,
-          "parentId": 1
-        },
-        {
-          "catName": "生鲜水果",
-          "childrenCats": null,
-          "id": 35,
-          "parentId": 1
-        }
-      ],
-      "id": 1,
-      "parentId": 0
+        "进口食品",
+        "营养保健",
+        "粮油干货",
+        "冲饮乳品",
+        "酒类",
+        "茶叶",
+        "生鲜水果"
+      ]
     },
     {
       "catName": "美妆护肤",
       "childrenCats": [
-        {
-          "catName": "美容护肤",
-          "childrenCats": null,
-          "id": 36,
-          "parentId": 2
-        },
-        {
-          "catName": "彩妆/香水/美妆工具",
-          "childrenCats": null,
-          "id": 37,
-          "parentId": 2
-        },
-        {
-          "catName": "美发/护发/假发",
-          "childrenCats": null,
-          "id": 38,
-          "parentId": 2
-        },
-        {
-          "catName": "沐浴/个人清洁",
-          "childrenCats": null,
-          "id": 39,
-          "parentId": 2
-        },
-        {
-          "catName": "美体/精油",
-          "childrenCats": null,
-          "id": 40,
-          "parentId": 2
-        },
-        {
-          "catName": "男士护肤",
-          "childrenCats": null,
-          "id": 41,
-          "parentId": 2
-        },
-        {
-          "catName": "口腔护理",
-          "childrenCats": null,
-          "id": 42,
-          "parentId": 2
-        }
-      ],
-      "id": 2,
-      "parentId": 0
+        "美容护肤",
+        "彩妆/香水/美妆工具",
+        "美发/护发/假发",
+        "沐浴/个人清洁",
+        "美体/精油",
+        "男士护肤",
+        "口腔护理"
+      ]
     },
     {
       "catName": "服饰",
       "childrenCats": [
-        {
-          "catName": "服饰配件/皮带/帽子/围巾",
-          "childrenCats": null,
-          "id": 43,
-          "parentId": 3
-        },
-        {
-          "catName": "女装",
-          "childrenCats": null,
-          "id": 44,
-          "parentId": 3
-        },
-        {
-          "catName": "男装",
-          "childrenCats": null,
-          "id": 45,
-          "parentId": 3
-        },
-        {
-          "catName": "女士内衣/男士内衣/家居服",
-          "childrenCats": null,
-          "id": 46,
-          "parentId": 3
-        },
-        {
-          "catName": "运动户外",
-          "childrenCats": null,
-          "id": 47,
-          "parentId": 3
-        }
-      ],
-      "id": 3,
-      "parentId": 0
+        "服饰配件/皮带/帽子/围巾",
+        "女装",
+        "男装",
+        "女士内衣/男士内衣/家居服",
+        "运动户外"
+      ]
     },
     {
       "catName": "鞋类箱包",
       "childrenCats": [
-        {
-          "catName": "男鞋",
-          "childrenCats": null,
-          "id": 48,
-          "parentId": 4
-        },
-        {
-          "catName": "女鞋",
-          "childrenCats": null,
-          "id": 49,
-          "parentId": 4
-        },
-        {
-          "catName": "潮流女包",
-          "childrenCats": null,
-          "id": 50,
-          "parentId": 4
-        },
-        {
-          "catName": "精品男包",
-          "childrenCats": null,
-          "id": 51,
-          "parentId": 4
-        },
-        {
-          "catName": "功能箱包",
-          "childrenCats": null,
-          "id": 52,
-          "parentId": 4
-        }
-      ],
-      "id": 4,
-      "parentId": 0
+        "男鞋",
+        "女鞋",
+        "潮流女包",
+        "精品男包",
+        "功能箱包"
+      ]
     },
     {
       "catName": "母婴",
       "childrenCats": [
-        {
-          "catName": "奶粉",
-          "childrenCats": null,
-          "id": 53,
-          "parentId": 5
-        },
-        {
-          "catName": "辅食/营养品",
-          "childrenCats": null,
-          "id": 54,
-          "parentId": 5
-        },
-        {
-          "catName": "纸尿裤/湿巾",
-          "childrenCats": null,
-          "id": 55,
-          "parentId": 5
-        },
-        {
-          "catName": "哺育喂养",
-          "childrenCats": null,
-          "id": 56,
-          "parentId": 5
-        },
-        {
-          "catName": "清洁洗护",
-          "childrenCats": null,
-          "id": 57,
-          "parentId": 5
-        },
-        {
-          "catName": "玩具/早教/益智/积木/模型",
-          "childrenCats": null,
-          "id": 58,
-          "parentId": 5
-        },
-        {
-          "catName": "车床/出行/安全/家纺",
-          "childrenCats": null,
-          "id": 59,
-          "parentId": 5
-        },
-        {
-          "catName": "童装童鞋",
-          "childrenCats": null,
-          "id": 60,
-          "parentId": 5
-        },
-        {
-          "catName": "孕妈专区",
-          "childrenCats": null,
-          "id": 61,
-          "parentId": 5
-        }
-      ],
-      "id": 5,
-      "parentId": 0
+        "奶粉",
+        "辅食/营养品",
+        "纸尿裤/湿巾",
+        "哺育喂养",
+        "清洁洗护",
+        "玩具/早教/益智/积木/模型",
+        "车床/出行/安全/家纺",
+        "童装童鞋",
+        "孕妈专区"
+      ]
     },
     {
       "catName": "居家日用",
       "childrenCats": [
-        {
-          "catName": "居家日用",
-          "childrenCats": null,
-          "id": 62,
-          "parentId": 6
-        },
-        {
-          "catName": "餐具水具",
-          "childrenCats": null,
-          "id": 63,
-          "parentId": 6
-        },
-        {
-          "catName": "厨具锅具",
-          "childrenCats": null,
-          "id": 64,
-          "parentId": 6
-        },
-        {
-          "catName": "床上用品",
-          "childrenCats": null,
-          "id": 65,
-          "parentId": 6
-        },
-        {
-          "catName": "家纺布艺",
-          "childrenCats": null,
-          "id": 66,
-          "parentId": 6
-        },
-        {
-          "catName": "宠物园艺",
-          "childrenCats": null,
-          "id": 67,
-          "parentId": 6
-        },
-        {
-          "catName": "收纳洗晒",
-          "childrenCats": null,
-          "id": 68,
-          "parentId": 6
-        },
-        {
-          "catName": "家装建材",
-          "childrenCats": null,
-          "id": 69,
-          "parentId": 6
-        },
-        {
-          "catName": "家具",
-          "childrenCats": null,
-          "id": 70,
-          "parentId": 6
-        },
-        {
-          "catName": "家饰",
-          "childrenCats": null,
-          "id": 71,
-          "parentId": 6
-        },
-        {
-          "catName": "成人用品",
-          "childrenCats": null,
-          "id": 72,
-          "parentId": 6
-        },
-        {
-          "catName": "卫生用品",
-          "childrenCats": null,
-          "id": 73,
-          "parentId": 6
-        },
-        {
-          "catName": "汽车用品",
-          "childrenCats": null,
-          "id": 74,
-          "parentId": 6
-        }
-      ],
-      "id": 6,
-      "parentId": 0
+        "居家日用",
+        "餐具水具",
+        "厨具锅具",
+        "床上用品",
+        "家纺布艺",
+        "宠物园艺",
+        "收纳洗晒",
+        "家装建材",
+        "家具",
+        "家饰",
+        "成人用品",
+        "卫生用品",
+        "汽车用品"
+      ]
     },
     {
       "catName": "珠宝配饰",
       "childrenCats": [
-        {
-          "catName": "珠宝/钻石/翡翠/黄金",
-          "childrenCats": null,
-          "id": 75,
-          "parentId": 7
-        },
-        {
-          "catName": "腕表",
-          "childrenCats": null,
-          "id": 76,
-          "parentId": 7
-        },
-        {
-          "catName": "时尚饰品",
-          "childrenCats": null,
-          "id": 77,
-          "parentId": 7
-        },
-        {
-          "catName": "眼镜",
-          "childrenCats": null,
-          "id": 78,
-          "parentId": 7
-        },
-        {
-          "catName": "打火机/瑞士军刀",
-          "childrenCats": null,
-          "id": 79,
-          "parentId": 7
-        }
-      ],
-      "id": 7,
-      "parentId": 0
+        "珠宝/钻石/翡翠/黄金",
+        "腕表",
+        "时尚饰品",
+        "眼镜",
+        "打火机/瑞士军刀"
+      ]
     },
     {
       "catName": "3C数码",
       "childrenCats": [
-        {
-          "catName": "手机",
-          "childrenCats": null,
-          "id": 80,
-          "parentId": 8
-        },
-        {
-          "catName": "手机配件",
-          "childrenCats": null,
-          "id": 81,
-          "parentId": 8
-        },
-        {
-          "catName": "电脑整机",
-          "childrenCats": null,
-          "id": 82,
-          "parentId": 8
-        },
-        {
-          "catName": "智能数码",
-          "childrenCats": null,
-          "id": 83,
-          "parentId": 8
-        },
-        {
-          "catName": "摄影摄像",
-          "childrenCats": null,
-          "id": 84,
-          "parentId": 8
-        },
-        {
-          "catName": "影音娱乐",
-          "childrenCats": null,
-          "id": 85,
-          "parentId": 8
-        },
-        {
-          "catName": "硬件存储",
-          "childrenCats": null,
-          "id": 86,
-          "parentId": 8
-        },
-        {
-          "catName": "数码配件",
-          "childrenCats": null,
-          "id": 87,
-          "parentId": 8
-        },
-        {
-          "catName": "办公设备",
-          "childrenCats": null,
-          "id": 88,
-          "parentId": 8
-        },
-        {
-          "catName": "文具耗材",
-          "childrenCats": null,
-          "id": 89,
-          "parentId": 8
-        }
-      ],
-      "id": 8,
-      "parentId": 0
+        "手机",
+        "手机配件",
+        "电脑整机",
+        "智能数码",
+        "摄影摄像",
+        "影音娱乐",
+        "硬件存储",
+        "数码配件",
+        "办公设备",
+        "文具耗材"
+      ]
     },
     {
       "catName": "家用电器",
       "childrenCats": [
-        {
-          "catName": "电视空调",
-          "childrenCats": null,
-          "id": 90,
-          "parentId": 9
-        },
-        {
-          "catName": "冰箱",
-          "childrenCats": null,
-          "id": 91,
-          "parentId": 9
-        },
-        {
-          "catName": "洗衣机",
-          "childrenCats": null,
-          "id": 92,
-          "parentId": 9
-        },
-        {
-          "catName": "厨房小电",
-          "childrenCats": null,
-          "id": 93,
-          "parentId": 9
-        },
-        {
-          "catName": "生活电器",
-          "childrenCats": null,
-          "id": 94,
-          "parentId": 9
-        },
-        {
-          "catName": "个护健康",
-          "childrenCats": null,
-          "id": 95,
-          "parentId": 9
-        },
-        {
-          "catName": "厨卫大电",
-          "childrenCats": null,
-          "id": 96,
-          "parentId": 9
-        }
-      ],
-      "id": 9,
-      "parentId": 0
+        "电视空调",
+        "冰箱",
+        "洗衣机",
+        "厨房小电",
+        "生活电器",
+        "个护健康",
+        "厨卫大电"
+      ]
     },
     {
       "catName": "图书音像",
       "childrenCats": [
-        {
-          "catName": "儿童读物",
-          "childrenCats": null,
-          "id": 97,
-          "parentId": 10
-        },
-        {
-          "catName": "畅销小说",
-          "childrenCats": null,
-          "id": 98,
-          "parentId": 10
-        },
-        {
-          "catName": "文学文艺",
-          "childrenCats": null,
-          "id": 99,
-          "parentId": 10
-        },
-        {
-          "catName": "电子书",
-          "childrenCats": null,
-          "id": 100,
-          "parentId": 10
-        },
-        {
-          "catName": "社科/经管",
-          "childrenCats": null,
-          "id": 101,
-          "parentId": 10
-        },
-        {
-          "catName": "育儿百科",
-          "childrenCats": null,
-          "id": 102,
-          "parentId": 10
-        },
-        {
-          "catName": "教育",
-          "childrenCats": null,
-          "id": 103,
-          "parentId": 10
-        },
-        {
-          "catName": "音像",
-          "childrenCats": null,
-          "id": 104,
-          "parentId": 10
-        },
-        {
-          "catName": "大牌乐器",
-          "childrenCats": null,
-          "id": 105,
-          "parentId": 10
-        }
-      ],
-      "id": 10,
-      "parentId": 0
+        "儿童读物",
+        "畅销小说",
+        "文学文艺",
+        "电子书",
+        "社科/经管",
+        "育儿百科",
+        "教育",
+        "音像",
+        "大牌乐器"
+      ]
     },
     {
       "catName": "医疗保健",
       "childrenCats": [
-        {
-          "catName": "中西医药品",
-          "childrenCats": null,
-          "id": 106,
-          "parentId": 11
-        },
-        {
-          "catName": "保健品",
-          "childrenCats": null,
-          "id": 107,
-          "parentId": 11
-        },
-        {
-          "catName": "滋补品",
-          "childrenCats": null,
-          "id": 108,
-          "parentId": 11
-        },
-        {
-          "catName": "医疗器械",
-          "childrenCats": null,
-          "id": 109,
-          "parentId": 11
-        },
-        {
-          "catName": "隐形眼镜",
-          "childrenCats": null,
-          "id": 110,
-          "parentId": 11
-        },
-        {
-          "catName": "健康服务",
-          "childrenCats": null,
-          "id": 111,
-          "parentId": 11
-        },
-        {
-          "catName": "体检",
-          "childrenCats": null,
-          "id": 112,
-          "parentId": 11
-        },
-        {
-          "catName": "整容整形",
-          "childrenCats": null,
-          "id": 113,
-          "parentId": 11
-        },
-        {
-          "catName": "按摩用品",
-          "childrenCats": null,
-          "id": 114,
-          "parentId": 11
-        }
-      ],
-      "id": 11,
-      "parentId": 0
+        "中西医药品",
+        "保健品",
+        "滋补品",
+        "医疗器械",
+        "隐形眼镜",
+        "健康服务",
+        "体检",
+        "整容整形",
+        "按摩用品"
+      ]
     },
     {
       "catName": "古董收藏",
       "childrenCats": [
-        {
-          "catName": "玉器",
-          "childrenCats": null,
-          "id": 115,
-          "parentId": 12
-        },
-        {
-          "catName": "古董",
-          "childrenCats": null,
-          "id": 116,
-          "parentId": 12
-        },
-        {
-          "catName": "收藏",
-          "childrenCats": null,
-          "id": 117,
-          "parentId": 12
-        },
-        {
-          "catName": "字画",
-          "childrenCats": null,
-          "id": 118,
-          "parentId": 12
-        }
-      ],
-      "id": 12,
-      "parentId": 0
+        "玉器",
+        "古董",
+        "收藏",
+        "字画"
+      ]
     },
     {
       "catName": "休闲娱乐",
       "childrenCats": [
-        {
-          "catName": "酒吧夜店",
-          "childrenCats": null,
-          "id": 119,
-          "parentId": 13
-        },
-        {
-          "catName": "KTV",
-          "childrenCats": null,
-          "id": 120,
-          "parentId": 13
-        },
-        {
-          "catName": "桑拿足浴",
-          "childrenCats": null,
-          "id": 121,
-          "parentId": 13
-        },
-        {
-          "catName": "洗浴汗蒸",
-          "childrenCats": null,
-          "id": 122,
-          "parentId": 13
-        },
-        {
-          "catName": "按摩",
-          "childrenCats": null,
-          "id": 123,
-          "parentId": 13
-        },
-        {
-          "catName": "电影院",
-          "childrenCats": null,
-          "id": 124,
-          "parentId": 13
-        },
-        {
-          "catName": "会馆会所",
-          "childrenCats": null,
-          "id": 125,
-          "parentId": 13
-        },
-        {
-          "catName": "文艺演出",
-          "childrenCats": null,
-          "id": 126,
-          "parentId": 13
-        },
-        {
-          "catName": "私人影院",
-          "childrenCats": null,
-          "id": 127,
-          "parentId": 13
-        },
-        {
-          "catName": "户外拓展",
-          "childrenCats": null,
-          "id": 128,
-          "parentId": 13
-        },
-        {
-          "catName": "室内游戏",
-          "childrenCats": null,
-          "id": 129,
-          "parentId": 13
-        },
-        {
-          "catName": "网吧网咖",
-          "childrenCats": null,
-          "id": 130,
-          "parentId": 13
-        },
-        {
-          "catName": "模玩/动漫/周边/cos",
-          "childrenCats": null,
-          "id": 131,
-          "parentId": 13
-        },
-        {
-          "catName": "休闲娱乐-其他",
-          "childrenCats": null,
-          "id": 132,
-          "parentId": 13
-        }
-      ],
-      "id": 13,
-      "parentId": 0
+        "酒吧夜店",
+        "KTV",
+        "桑拿足浴",
+        "洗浴汗蒸",
+        "按摩",
+        "电影院",
+        "会馆会所",
+        "文艺演出",
+        "私人影院",
+        "户外拓展",
+        "室内游戏",
+        "网吧网咖",
+        "模玩/动漫/周边/cos",
+        "休闲娱乐-其他"
+      ]
     },
     {
       "catName": "餐饮美食",
       "childrenCats": [
-        {
-          "catName": "火锅",
-          "childrenCats": null,
-          "id": 133,
-          "parentId": 14
-        },
-        {
-          "catName": "自助餐",
-          "childrenCats": null,
-          "id": 134,
-          "parentId": 14
-        },
-        {
-          "catName": "日韩料理",
-          "childrenCats": null,
-          "id": 135,
-          "parentId": 14
-        },
-        {
-          "catName": "小吃快餐",
-          "childrenCats": null,
-          "id": 136,
-          "parentId": 14
-        },
-        {
-          "catName": "西餐",
-          "childrenCats": null,
-          "id": 137,
-          "parentId": 14
-        },
-        {
-          "catName": "中式料理",
-          "childrenCats": null,
-          "id": 138,
-          "parentId": 14
-        },
-        {
-          "catName": "烧烤",
-          "childrenCats": null,
-          "id": 139,
-          "parentId": 14
-        },
-        {
-          "catName": "咖啡酒吧茶馆",
-          "childrenCats": null,
-          "id": 140,
-          "parentId": 14
-        },
-        {
-          "catName": "甜点饮品",
-          "childrenCats": null,
-          "id": 141,
-          "parentId": 14
-        },
-        {
-          "catName": "餐饮美食-其他",
-          "childrenCats": null,
-          "id": 142,
-          "parentId": 14
-        }
-      ],
-      "id": 14,
-      "parentId": 0
+        "火锅",
+        "自助餐",
+        "日韩料理",
+        "小吃快餐",
+        "西餐",
+        "中式料理",
+        "烧烤",
+        "咖啡酒吧茶馆",
+        "甜点饮品",
+        "餐饮美食-其他"
+      ]
     },
     {
       "catName": "丽人",
       "childrenCats": [
-        {
-          "catName": "美发",
-          "childrenCats": null,
-          "id": 143,
-          "parentId": 15
-        },
-        {
-          "catName": "美容/SPA",
-          "childrenCats": null,
-          "id": 144,
-          "parentId": 15
-        },
-        {
-          "catName": "美甲美睫",
-          "childrenCats": null,
-          "id": 145,
-          "parentId": 15
-        },
-        {
-          "catName": "瘦身纤体",
-          "childrenCats": null,
-          "id": 146,
-          "parentId": 15
-        },
-        {
-          "catName": "瑜伽舞蹈",
-          "childrenCats": null,
-          "id": 147,
-          "parentId": 15
-        },
-        {
-          "catName": "纹绣",
-          "childrenCats": null,
-          "id": 148,
-          "parentId": 15
-        },
-        {
-          "catName": "产后塑性",
-          "childrenCats": null,
-          "id": 149,
-          "parentId": 15
-        },
-        {
-          "catName": "整形",
-          "childrenCats": null,
-          "id": 150,
-          "parentId": 15
-        },
-        {
-          "catName": "丽人-其他",
-          "childrenCats": null,
-          "id": 151,
-          "parentId": 15
-        }
-      ],
-      "id": 15,
-      "parentId": 0
+        "美发",
+        "美容/SPA",
+        "美甲美睫",
+        "瘦身纤体",
+        "瑜伽舞蹈",
+        "纹绣",
+        "产后塑性",
+        "整形",
+        "丽人-其他"
+      ]
     },
     {
       "catName": "旅游酒店",
       "childrenCats": [
-        {
-          "catName": "酒店",
-          "childrenCats": null,
-          "id": 152,
-          "parentId": 16
-        },
-        {
-          "catName": "度假村/农家乐/客栈",
-          "childrenCats": null,
-          "id": 153,
-          "parentId": 16
-        },
-        {
-          "catName": "旅馆旅社",
-          "childrenCats": null,
-          "id": 154,
-          "parentId": 16
-        },
-        {
-          "catName": "票务服务",
-          "childrenCats": null,
-          "id": 155,
-          "parentId": 16
-        },
-        {
-          "catName": "签证服务",
-          "childrenCats": null,
-          "id": 156,
-          "parentId": 16
-        },
-        {
-          "catName": "周边游",
-          "childrenCats": null,
-          "id": 157,
-          "parentId": 16
-        },
-        {
-          "catName": "其他游玩",
-          "childrenCats": null,
-          "id": 158,
-          "parentId": 16
-        }
-      ],
-      "id": 16,
-      "parentId": 0
+        "酒店",
+        "度假村/农家乐/客栈",
+        "旅馆旅社",
+        "票务服务",
+        "签证服务",
+        "周边游",
+        "其他游玩"
+      ]
     },
     {
       "catName": "汽车/交通",
       "childrenCats": [
-        {
-          "catName": "新车/二手车（品牌商）",
-          "childrenCats": null,
-          "id": 159,
-          "parentId": 17
-        },
-        {
-          "catName": "汽车（经销商）",
-          "childrenCats": null,
-          "id": 160,
-          "parentId": 17
-        },
-        {
-          "catName": "汽车租赁",
-          "childrenCats": null,
-          "id": 161,
-          "parentId": 17
-        },
-        {
-          "catName": "汽车美容/保养/用品",
-          "childrenCats": null,
-          "id": 162,
-          "parentId": 17
-        },
-        {
-          "catName": "汽车改装",
-          "childrenCats": null,
-          "id": 163,
-          "parentId": 17
-        },
-        {
-          "catName": "汽车陪练",
-          "childrenCats": null,
-          "id": 164,
-          "parentId": 17
-        },
-        {
-          "catName": "各类配件",
-          "childrenCats": null,
-          "id": 165,
-          "parentId": 17
-        },
-        {
-          "catName": "停车场",
-          "childrenCats": null,
-          "id": 166,
-          "parentId": 17
-        },
-        {
-          "catName": "航空公司",
-          "childrenCats": null,
-          "id": 167,
-          "parentId": 17
-        },
-        {
-          "catName": "汽车/交通-其他",
-          "childrenCats": null,
-          "id": 168,
-          "parentId": 17
-        }
-      ],
-      "id": 17,
-      "parentId": 0
+        "新车/二手车（品牌商）",
+        "汽车（经销商）",
+        "汽车租赁",
+        "汽车美容/保养/用品",
+        "汽车改装",
+        "汽车陪练",
+        "各类配件",
+        "停车场",
+        "航空公司",
+        "汽车/交通-其他"
+      ]
     },
     {
       "catName": "商务办公",
       "childrenCats": [
-        {
-          "catName": "法律咨询",
-          "childrenCats": null,
-          "id": 169,
-          "parentId": 18
-        },
-        {
-          "catName": "财务会计评估",
-          "childrenCats": null,
-          "id": 170,
-          "parentId": 18
-        },
-        {
-          "catName": "广告策划公关",
-          "childrenCats": null,
-          "id": 171,
-          "parentId": 18
-        },
-        {
-          "catName": "人力资源",
-          "childrenCats": null,
-          "id": 172,
-          "parentId": 18
-        },
-        {
-          "catName": "网站建站",
-          "childrenCats": null,
-          "id": 173,
-          "parentId": 18
-        },
-        {
-          "catName": "翻译速记",
-          "childrenCats": null,
-          "id": 174,
-          "parentId": 18
-        },
-        {
-          "catName": "咨询顾问",
-          "childrenCats": null,
-          "id": 175,
-          "parentId": 18
-        },
-        {
-          "catName": "办公耗材",
-          "childrenCats": null,
-          "id": 176,
-          "parentId": 18
-        },
-        {
-          "catName": "办公设备",
-          "childrenCats": null,
-          "id": 177,
-          "parentId": 18
-        },
-        {
-          "catName": "印刷喷绘",
-          "childrenCats": null,
-          "id": 178,
-          "parentId": 18
-        },
-        {
-          "catName": "招商加盟",
-          "childrenCats": null,
-          "id": 179,
-          "parentId": 18
-        },
-        {
-          "catName": "商务办公-其他",
-          "childrenCats": null,
-          "id": 180,
-          "parentId": 18
-        }
-      ],
-      "id": 18,
-      "parentId": 0
+        "法律咨询",
+        "财务会计评估",
+        "广告策划公关",
+        "人力资源",
+        "网站建站",
+        "翻译速记",
+        "咨询顾问",
+        "办公耗材",
+        "办公设备",
+        "印刷喷绘",
+        "招商加盟",
+        "商务办公-其他"
+      ]
     },
     {
       "catName": "便民生活",
       "childrenCats": [
-        {
-          "catName": "家政服务",
-          "childrenCats": null,
-          "id": 181,
-          "parentId": 19
-        },
-        {
-          "catName": "婚庆婚纱摄影",
-          "childrenCats": null,
-          "id": 182,
-          "parentId": 19
-        },
-        {
-          "catName": "搬家搬运",
-          "childrenCats": null,
-          "id": 183,
-          "parentId": 19
-        },
-        {
-          "catName": "维修疏通",
-          "childrenCats": null,
-          "id": 184,
-          "parentId": 19
-        },
-        {
-          "catName": "鲜花速递",
-          "childrenCats": null,
-          "id": 185,
-          "parentId": 19
-        },
-        {
-          "catName": "交友征婚",
-          "childrenCats": null,
-          "id": 186,
-          "parentId": 19
-        },
-        {
-          "catName": "摄影摄像",
-          "childrenCats": null,
-          "id": 187,
-          "parentId": 19
-        },
-        {
-          "catName": "物流快递",
-          "childrenCats": null,
-          "id": 188,
-          "parentId": 19
-        },
-        {
-          "catName": "洗衣店",
-          "childrenCats": null,
-          "id": 189,
-          "parentId": 19
-        },
-        {
-          "catName": "便民生活-其他",
-          "childrenCats": null,
-          "id": 190,
-          "parentId": 19
-        }
-      ],
-      "id": 19,
-      "parentId": 0
+        "家政服务",
+        "婚庆婚纱摄影",
+        "搬家搬运",
+        "维修疏通",
+        "鲜花速递",
+        "交友征婚",
+        "摄影摄像",
+        "物流快递",
+        "洗衣店",
+        "便民生活-其他"
+      ]
     },
     {
       "catName": "文化体育",
       "childrenCats": [
-        {
-          "catName": "比赛/文化活动/展览",
-          "childrenCats": null,
-          "id": 191,
-          "parentId": 20
-        },
-        {
-          "catName": "体育户外活动",
-          "childrenCats": null,
-          "id": 192,
-          "parentId": 20
-        },
-        {
-          "catName": "文化出版",
-          "childrenCats": null,
-          "id": 193,
-          "parentId": 20
-        },
-        {
-          "catName": "体育场馆",
-          "childrenCats": null,
-          "id": 194,
-          "parentId": 20
-        },
-        {
-          "catName": "图书馆",
-          "childrenCats": null,
-          "id": 195,
-          "parentId": 20
-        },
-        {
-          "catName": "文化体育-其他",
-          "childrenCats": null,
-          "id": 196,
-          "parentId": 20
-        }
-      ],
-      "id": 20,
-      "parentId": 0
+        "比赛/文化活动/展览",
+        "体育户外活动",
+        "文化出版",
+        "体育场馆",
+        "图书馆",
+        "文化体育-其他"
+      ]
     },
     {
       "catName": "学习培训",
       "childrenCats": [
-        {
-          "catName": "职业培训",
-          "childrenCats": null,
-          "id": 197,
-          "parentId": 21
-        },
-        {
-          "catName": "考试升学",
-          "childrenCats": null,
-          "id": 198,
-          "parentId": 21
-        },
-        {
-          "catName": "留学出国",
-          "childrenCats": null,
-          "id": 199,
-          "parentId": 21
-        },
-        {
-          "catName": "婴幼儿教育",
-          "childrenCats": null,
-          "id": 200,
-          "parentId": 21
-        },
-        {
-          "catName": "外语培训",
-          "childrenCats": null,
-          "id": 201,
-          "parentId": 21
-        },
-        {
-          "catName": "远程教育",
-          "childrenCats": null,
-          "id": 202,
-          "parentId": 21
-        },
-        {
-          "catName": "家教",
-          "childrenCats": null,
-          "id": 203,
-          "parentId": 21
-        },
-        {
-          "catName": "IT培训",
-          "childrenCats": null,
-          "id": 204,
-          "parentId": 21
-        },
-        {
-          "catName": "MBA管理培训",
-          "childrenCats": null,
-          "id": 205,
-          "parentId": 21
-        },
-        {
-          "catName": "教育出国-其他",
-          "childrenCats": null,
-          "id": 206,
-          "parentId": 21
-        }
-      ],
-      "id": 21,
-      "parentId": 0
+        "职业培训",
+        "考试升学",
+        "留学出国",
+        "婴幼儿教育",
+        "外语培训",
+        "远程教育",
+        "家教",
+        "IT培训",
+        "MBA管理培训",
+        "教育出国-其他"
+      ]
     },
     {
       "catName": "房地产",
       "childrenCats": [
-        {
-          "catName": "商务租赁",
-          "childrenCats": null,
-          "id": 207,
-          "parentId": 22
-        },
-        {
-          "catName": "房产中介",
-          "childrenCats": null,
-          "id": 208,
-          "parentId": 22
-        },
-        {
-          "catName": "装潢设计",
-          "childrenCats": null,
-          "id": 209,
-          "parentId": 22
-        },
-        {
-          "catName": "楼盘销售",
-          "childrenCats": null,
-          "id": 210,
-          "parentId": 22
-        },
-        {
-          "catName": "建材施工",
-          "childrenCats": null,
-          "id": 211,
-          "parentId": 22
-        },
-        {
-          "catName": "房地产-其他",
-          "childrenCats": null,
-          "id": 212,
-          "parentId": 22
-        }
-      ],
-      "id": 22,
-      "parentId": 0
+        "商务租赁",
+        "房产中介",
+        "装潢设计",
+        "楼盘销售",
+        "建材施工",
+        "房地产-其他"
+      ]
     },
     {
       "catName": "金融理财",
       "childrenCats": [
-        {
-          "catName": "基金证券",
-          "childrenCats": null,
-          "id": 213,
-          "parentId": 23
-        },
-        {
-          "catName": "银行服务",
-          "childrenCats": null,
-          "id": 214,
-          "parentId": 23
-        },
-        {
-          "catName": "保险产品",
-          "childrenCats": null,
-          "id": 215,
-          "parentId": 23
-        },
-        {
-          "catName": "金融投资",
-          "childrenCats": null,
-          "id": 216,
-          "parentId": 23
-        },
-        {
-          "catName": "理财产品",
-          "childrenCats": null,
-          "id": 217,
-          "parentId": 23
-        },
-        {
-          "catName": "金融理财-其他",
-          "childrenCats": null,
-          "id": 218,
-          "parentId": 23
-        }
-      ],
-      "id": 23,
-      "parentId": 0
+        "基金证券",
+        "银行服务",
+        "保险产品",
+        "金融投资",
+        "理财产品",
+        "金融理财-其他"
+      ]
     },
     {
       "catName": "网络游戏",
       "childrenCats": [
-        {
-          "catName": "网络游戏点卡",
-          "childrenCats": null,
-          "id": 219,
-          "parentId": 24
-        },
-        {
-          "catName": "网游装备/游戏币/帐号/代练",
-          "childrenCats": null,
-          "id": 220,
-          "parentId": 24
-        },
-        {
-          "catName": "网络游戏-其他",
-          "childrenCats": null,
-          "id": 221,
-          "parentId": 24
-        }
-      ],
-      "id": 24,
-      "parentId": 0
+        "网络游戏点卡",
+        "网游装备/游戏币/帐号/代练",
+        "网络游戏-其他"
+      ]
     },
     {
       "catName": "话费通信",
       "childrenCats": [
-        {
-          "catName": "移动/联通/电信充值",
-          "childrenCats": null,
-          "id": 222,
-          "parentId": 25
-        },
-        {
-          "catName": "手机号码/套餐/增值业务",
-          "childrenCats": null,
-          "id": 223,
-          "parentId": 25
-        },
-        {
-          "catName": "话费通信-其他",
-          "childrenCats": null,
-          "id": 224,
-          "parentId": 25
-        }
-      ],
-      "id": 25,
-      "parentId": 0
+        "移动/联通/电信充值",
+        "手机号码/套餐/增值业务",
+        "话费通信-其他"
+      ]
     },
     {
       "catName": "工农用品",
       "childrenCats": [
-        {
-          "catName": "工业用品",
-          "childrenCats": null,
-          "id": 225,
-          "parentId": 26
-        },
-        {
-          "catName": "新能源",
-          "childrenCats": null,
-          "id": 226,
-          "parentId": 26
-        },
-        {
-          "catName": "化工用品",
-          "childrenCats": null,
-          "id": 227,
-          "parentId": 26
-        },
-        {
-          "catName": "农具",
-          "childrenCats": null,
-          "id": 228,
-          "parentId": 26
-        },
-        {
-          "catName": "大型器械",
-          "childrenCats": null,
-          "id": 229,
-          "parentId": 26
-        },
-        {
-          "catName": "其他",
-          "childrenCats": null,
-          "id": 230,
-          "parentId": 26
-        }
-      ],
-      "id": 26,
-      "parentId": 0
+        "工业用品",
+        "新能源",
+        "化工用品",
+        "农具",
+        "大型器械",
+        "其他"
+      ]
     },
     {
       "catName": "其他",
       "childrenCats": [
-        {
-          "catName": "其他",
-          "childrenCats": null,
-          "id": 231,
-          "parentId": 27
-        }
-      ],
-      "id": 27,
-      "parentId": 0
+        "其他"
+      ]
     }
   ]
 }
