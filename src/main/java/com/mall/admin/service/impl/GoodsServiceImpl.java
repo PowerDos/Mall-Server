@@ -63,6 +63,26 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
+    public int getCount() {
+        return goodsDao.getCount();
+    }
+
+    @Override
+    public int getCountByGoodsName(String goodsName) {
+        return goodsDao.getCountByGoodsName(goodsName);
+    }
+
+    @Override
+    public int getCountByMerchantId(int merchantId) {
+        return goodsDao.getCountByMerchantId(merchantId);
+    }
+
+    @Override
+    public int getCountByCatId(int catId) {
+        return goodsDao.getCountByCatId(catId);
+    }
+
+    @Override
     public Goods findById(int id) {
         Goods goods = goodsDao.findById(id);
         return goods;
