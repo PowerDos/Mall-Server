@@ -26,7 +26,15 @@ public class Address {
     // 邮政编码
     private String postalcode;
 
-    private String userid;
+    private int userid;
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
 
     public int getAddress_id() {
         return address_id;
