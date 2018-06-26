@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 @Repository
@@ -31,10 +32,10 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public Set<User> getUserByPhone(String phone) {
+    public List<User> getUserByPhone(String phone) {
         DetachedCriteria criteria=DetachedCriteria.forClass(User.class);
         criteria.add(Restrictions.eq("phone", phone));
-        Set<User> list = (Set<User>) template.findByCriteria(criteria, 0, 1);
+        List<User> list = (List<User>) template.findByCriteria(criteria, 0, 1);
         return list;
     }
 }
