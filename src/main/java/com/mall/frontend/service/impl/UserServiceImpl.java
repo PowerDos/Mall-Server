@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean isExist(String phone) {
-        Set<User> users = userDao.getUserByPhone(phone);
+        List<User> users = userDao.getUserByPhone(phone);
         if (users.size() > 0) {
             return true;
         }
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public User isAllowLogin(String phone, String password) {
-        List<User> users = (List<User>) userDao.getUserByPhone(phone);
+        List<User> users = userDao.getUserByPhone(phone);
         String pwd = users.size() > 0 ? users.get(0).getPassword() : "xasda";
         System.out.println(pwd);
         if (pwd.equals(password)) {
