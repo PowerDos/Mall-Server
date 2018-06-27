@@ -74,9 +74,9 @@ public class Merchant {
         this.merchantDesc = merchantDesc;
     }
 
-    public String getAdminPass() {
-        return adminPass;
-    }
+//    public String getAdminPass() {
+//        return adminPass;
+//    }
 
     public void setAdminPass(String adminPass) {
         this.adminPass = adminPass;

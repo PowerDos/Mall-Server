@@ -28,6 +28,7 @@ public class AdminUser {
     @Column(length=64)
     private String password;
 
+    @ColumnDefault(value = "false")
     private Boolean isAdmin;
 
     @Column(length=255)
