@@ -120,6 +120,10 @@ public class GoodsAction extends AdminBaseAction {
             jsonResult = ResponseTemplate.error(-1, "Param goods is required!");
             return SUCCESS;
         }
+        System.out.println(goods.getGoodsAttrs().size());
+        System.out.println(goods.getGoodsName());
+        System.out.println(goods.getGoodsImgs());
+        System.out.println(goods.getGoodsDesc());
 
         goodsService.update(goods);
 

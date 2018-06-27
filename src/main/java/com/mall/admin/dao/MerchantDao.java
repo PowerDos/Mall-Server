@@ -11,6 +11,8 @@ public interface MerchantDao {
 
     List<Merchant> findByPage(int page, int pageSize);
 
+    List<Merchant> getMerchantByMerchantName(String merchantName);
+
     Merchant findById(int id);
 
     int save(Merchant merchant);

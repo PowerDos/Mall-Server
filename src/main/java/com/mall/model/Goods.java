@@ -1,6 +1,7 @@
 package com.mall.model;
 
 
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.GenericGenerator;
@@ -35,7 +36,12 @@ public class Goods {
     private double basicPrice;
 
     // 商品销售总数
+    @ColumnDefault(value = "0")
     private int salesNum;
+
+    // 库存总数
+    @ColumnDefault(value = "0")
+    private int skuNum;
 
     // 商品所在分类 ID
     @ManyToOne
@@ -166,5 +172,13 @@ public class Goods {
 
     public void setBasicPrice(double basicPrice) {
         this.basicPrice = basicPrice;
+    }
+
+    public int getSkuNum() {
+        return skuNum;
+    }
+
+    public void setSkuNum(int skuNum) {
+        this.skuNum = skuNum;
     }
 }

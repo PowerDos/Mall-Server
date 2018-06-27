@@ -29,7 +29,7 @@ public class GoodsAction extends BaseAction {
         if (hasParam("order")) {
             orderKeys = getParam("order");
         } else {
-            orderKeys = "salesNum";
+            orderKeys = "-salesNum";
         }
 
         int count;

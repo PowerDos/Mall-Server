@@ -47,6 +47,14 @@ public class MerchantDaoImpl implements MerchantDao {
     }
 
     @Override
+    public List<Merchant> getMerchantByMerchantName(String merchantName) {
+        DetachedCriteria criteria=DetachedCriteria.forClass(Merchant.class);
+        criteria.add(Restrictions.eq("merchantName", merchantName));
+        List<Merchant> list = (List<Merchant>) template.findByCriteria(criteria, 0, 1);
+        return list;
+    }
+
+    @Override
     @Transactional()
     public int save(Merchant merchant) {
         Serializable result = template.save(merchant);

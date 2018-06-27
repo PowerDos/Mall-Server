@@ -3,11 +3,14 @@ package com.mall.admin.action;
 import com.mall.admin.service.MerchantService;
 import com.mall.model.Merchant;
 import com.mall.utils.ResponseTemplate;
+import com.mall.utils.Token;
+import com.mall.utils.sign;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +19,7 @@ public class MerchantAction extends AdminBaseAction {
     @Autowired
     private MerchantService merchantService;
 
-    private Merchant merchant;
+    private Merchant merchant = new Merchant();
     private List<Merchant> merchants;
 
     public Map<String, Object> jsonResult;
@@ -104,6 +107,41 @@ public class MerchantAction extends AdminBaseAction {
 
         Map<String, Object> map = new HashMap<>();
         jsonResult = ResponseTemplate.success(map);
+        return SUCCESS;
+    }
+
+    /**
+     * 注册
+     * @return
+     */
+    public String signUp() {
+        String encodePwd = sign.md5(merchant.getAdminPass());
+        merchant.setAdminPass(encodePwd);
+        int result = merchantService.save(merchant);
+        if (result > 0) {
+            jsonResult = ResponseTemplate.success( null);
+        } else {
+            jsonResult = ResponseTemplate.error(101, "注册错误");
+        }
+        return SUCCESS;
+    }
+
+    /**
+     * 登陆
+     * @return
+     */
+    public String login() {
+        Merchant merchant =  merchantService.isAllowLogin(this.merchant.getMerchantName(), this.merchant.getAdminPass());
+        if (merchant != null) {
+            String str = Token.createToken(merchant, 3600 * 60);
+            Map<String, Object> data = new LinkedHashMap<>();
+            data.put("username", merchant.getMerchantName());
+            data.put("desc", merchant.getMerchantName());
+            data.put("token", str);
+            jsonResult = ResponseTemplate.success(data);
+        } else {
+            jsonResult = ResponseTemplate.error(102, "登陆失败");
+        }
         return SUCCESS;
     }
 

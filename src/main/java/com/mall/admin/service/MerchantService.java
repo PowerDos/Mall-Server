@@ -10,6 +10,8 @@ public interface MerchantService {
 
     List<Merchant> findByPage(int offset, int pageSize);
 
+    Merchant isAllowLogin(String merchantName, String password);
+
     Merchant findById(int id);
 
     int save(Merchant merchant);

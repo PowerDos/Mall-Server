@@ -36,9 +36,6 @@ public class GoodsAttr {
     @ColumnDefault(value = "false")
     private Boolean onSale;
 
-//    @ManyToOne
-//    private Goods goods;
-
     public int getId() {
         return id;
     }

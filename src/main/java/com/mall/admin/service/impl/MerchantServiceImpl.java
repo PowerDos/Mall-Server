@@ -39,6 +39,16 @@ public class MerchantServiceImpl implements MerchantService {
     }
 
     @Override
+    public Merchant isAllowLogin(String merchantName, String password) {
+        List<Merchant> merchants = merchantDao.getMerchantByMerchantName(merchantName);
+        String pwd = merchants.size() > 0 ? merchants.get(0).getAdminPass() : "xasda";
+        if (pwd.equals(password)) {
+            return merchants.get(0);
+        }
+        return null;
+    }
+
+    @Override
     public void update(Merchant merchant) {
         merchantDao.update(merchant);
     }
