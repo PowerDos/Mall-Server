@@ -4,6 +4,7 @@ import com.mall.frontend.dao.ShoppingCartDao;
 import com.mall.model.ShoppingCart;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Disjunction;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -37,4 +38,19 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
         List<ShoppingCart> list = (List<ShoppingCart>) template.findByCriteria(criteria);
         return list;
     }
+
+    @Override
+    @Transactional
+    public void delShoppingCart(int[] cart) {
+        DetachedCriteria criteria=DetachedCriteria.forClass(ShoppingCart.class);
+        Disjunction dis = Restrictions.disjunction();
+        for(int item : cart) {
+            System.out.println(item);
+            dis.add(Restrictions.eq("id", item));
+        }
+        criteria.add(dis);
+        List<ShoppingCart> list = (List<ShoppingCart>) template.findByCriteria(criteria);
+        template.deleteAll(list);
+    }
+
 }
