@@ -11,7 +11,7 @@ public class ShoppingCart {
     @Id
     @GeneratedValue(generator="id")
     @GenericGenerator(name="id", strategy="native")
-    private int id; // 用户id
+    private int id; // 购物车id
     // 商品图片
     private String img;
     // 商品ID

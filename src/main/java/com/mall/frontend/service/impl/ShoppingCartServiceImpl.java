@@ -22,4 +22,9 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         List<ShoppingCart> list = shoppingCartDao.getShoppingCartByUserId(userid);
         return list;
     }
+
+    @Override
+    public void delCart(int[] cart) {
+        shoppingCartDao.delShoppingCart(cart);
+    }
 }

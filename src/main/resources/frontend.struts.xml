@@ -59,5 +59,11 @@
                 <param name="root">jsonResult</param>
             </result>
         </action>
+        <action name="order_*" class="orderAction" method="{1}">
+            <interceptor-ref name="myStack" />
+            <result name="success" type="json" >
+                <param name="root">jsonResult</param>
+            </result>
+        </action>
     </package>
 </struts>
